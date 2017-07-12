@@ -1,0 +1,26 @@
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\bin\Debug\Infra.data.dll.config
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\bin\Debug\Infra.data.dll
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\bin\Debug\Infra.data.pdb
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\bin\Debug\EntityFramework.dll
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\bin\Debug\EntityFramework.xml
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\obj\Debug\Infra.data.csprojResolveAssemblyReference.cache
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\obj\Debug\Infra.data.dll
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\obj\Debug\Infra.data.pdb
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\obj\Debug\Infra.data.Migrations.initial.resources
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\obj\Debug\Infra.data.csproj.GenerateResource.Cache
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Infra.data\obj\Debug\Infra.data.Migrations.StrTeste.resources
+C:\DVP\CSharp\EFCodFirst\Infra.data\bin\Debug\Infra.data.dll.config
+C:\DVP\CSharp\EFCodFirst\Infra.data\bin\Debug\Infra.data.dll
+C:\DVP\CSharp\EFCodFirst\Infra.data\bin\Debug\Infra.data.pdb
+C:\DVP\CSharp\EFCodFirst\Infra.data\bin\Debug\EntityFramework.dll
+C:\DVP\CSharp\EFCodFirst\Infra.data\bin\Debug\EntityFramework.SqlServer.dll
+C:\DVP\CSharp\EFCodFirst\Infra.data\bin\Debug\EntityFramework.xml
+C:\DVP\CSharp\EFCodFirst\Infra.data\bin\Debug\EntityFramework.SqlServer.xml
+C:\DVP\CSharp\EFCodFirst\Infra.data\obj\Debug\Infra.data.csprojResolveAssemblyReference.cache
+C:\DVP\CSharp\EFCodFirst\Infra.data\obj\Debug\Infra.data.Migrations.initial.resources
+C:\DVP\CSharp\EFCodFirst\Infra.data\obj\Debug\Infra.data.Migrations.StrTeste.resources
+C:\DVP\CSharp\EFCodFirst\Infra.data\obj\Debug\Infra.data.csproj.GenerateResource.Cache
+C:\DVP\CSharp\EFCodFirst\Infra.data\obj\Debug\Infra.data.dll
+C:\DVP\CSharp\EFCodFirst\Infra.data\obj\Debug\Infra.data.pdb

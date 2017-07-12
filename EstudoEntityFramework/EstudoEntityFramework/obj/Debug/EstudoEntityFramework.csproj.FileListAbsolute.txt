@@ -1,0 +1,26 @@
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EstudoEntityFramework.exe.config
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EstudoEntityFramework.exe
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EstudoEntityFramework.pdb
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EntityFramework.dll
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EntityFramework.xml
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.csprojResolveAssemblyReference.cache
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.Form1.resources
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.Properties.Resources.resources
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.csproj.GenerateResource.Cache
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.exe
+c:\users\charles\documents\visual studio 2013\Projects\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.pdb
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EstudoEntityFramework.exe.config
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.exe
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.pdb
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EstudoEntityFramework.exe
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EstudoEntityFramework.pdb
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EntityFramework.dll
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EntityFramework.xml
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.csprojResolveAssemblyReference.cache
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.Form1.resources
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.Properties.Resources.resources
+C:\DVP\CSharp\EstudoEntityFramework\EstudoEntityFramework\obj\Debug\EstudoEntityFramework.csproj.GenerateResource.Cache

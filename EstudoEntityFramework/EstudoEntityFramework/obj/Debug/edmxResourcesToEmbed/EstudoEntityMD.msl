@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDEstudoModelStoreContainer" CdmEntityContainer="BDEstudoConnection">
+    <EntitySetMapping Name="Bairro">
+      <EntityTypeMapping TypeName="BDEstudoModel.Bairro">
+        <MappingFragment StoreEntitySet="Bairro">
+          <ScalarProperty Name="pk_intCod" ColumnName="pk_intCod" />
+          <ScalarProperty Name="strNOME" ColumnName="strNOME" />
+          <ScalarProperty Name="strcep" ColumnName="strcep" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="BDEstudoModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="pk_intCod" ColumnName="pk_intCod" />
+          <ScalarProperty Name="fk_intBairro" ColumnName="fk_intBairro" />
+          <ScalarProperty Name="strNOME" ColumnName="strNOME" />
+          <ScalarProperty Name="intIdade" ColumnName="intIdade" />
+          <ScalarProperty Name="strSexo" ColumnName="strSexo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

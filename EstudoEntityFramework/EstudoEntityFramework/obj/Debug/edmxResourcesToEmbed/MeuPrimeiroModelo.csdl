@@ -1,0 +1,845 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OuroBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Mov_Estoque">
+    <Key>
+      <PropertyRef Name="IdMovimento" />
+    </Key>
+    <Property Name="IdMovimento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdParalelo" Type="Int32" />
+    <Property Name="Estoque" Type="Int32" />
+    <Property Name="IdOS" Type="Int32" />
+    <Property Name="IdEtapa" Type="Int32" />
+    <Property Name="Descrição" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="ÉEntrada" Type="Boolean" Nullable="false" />
+    <Property Name="IdCadastro" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="NúmeroDocumento" Type="Int32" />
+    <Property Name="NúmeroPedido" Type="Int32" />
+    <Property Name="IdUsuário" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TelaOrigem" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="IdTipoMovimento" Type="Int32" />
+    <Property Name="IdEmpresa" Type="Int32" />
+    <Property Name="NúmeroParcelas" Type="Int16" />
+    <Property Name="PrazoMédioParcelas" Type="Int16" />
+    <Property Name="TotalServiços" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="TipoFaturamento" Type="Int32" />
+    <Property Name="ClassificaçãoMovimento" Type="Int16" />
+    <Property Name="TotalIPI" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="TotalICM" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="baseCalculoICM" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CódigoNaturezaOperação" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="CódigoConta" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="CódigoCentroAcumulação" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="EspécieDocumento" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SérieDocumento" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ICMSobreValorContábil" Type="Boolean" Nullable="false" />
+    <Property Name="TemICM" Type="Boolean" Nullable="false" />
+    <Property Name="TemIPI" Type="Boolean" Nullable="false" />
+    <Property Name="TemISS" Type="Boolean" Nullable="false" />
+    <Property Name="PercentualICM" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PercentualISS" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="DescontoValor" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorOutrasDespesas" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="TotalValorItens" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="TransportadoraVencimento" Type="DateTime" Precision="3" />
+    <Property Name="TransportadoraCódigo" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="TotalFrete" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="FreteExterno" Type="Boolean" Nullable="false" />
+    <Property Name="IdFuncionário" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="DataEmissão" Type="DateTime" Precision="3" />
+    <Property Name="TotalDocumento" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="IdCancelamento" Type="Int32" />
+    <Property Name="TotalPeso" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PercentualComissão" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="TotalComissão" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="IdPedidoUtilizado" Type="Int32" />
+    <Property Name="DataEntrega" Type="DateTime" Precision="3" />
+    <Property Name="TotalValorCustoItens" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DetalheEntrega" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IdGrupoMov" Type="Int32" />
+    <Property Name="Ped_Valor_ServiçoFat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Ped_Valor_ItensFat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ParcelamentoAutomático" Type="Boolean" Nullable="false" />
+    <Property Name="Ped_Pendente_Liberado" Type="Boolean" Nullable="false" />
+    <Property Name="OSFoiAberta" Type="Boolean" Nullable="false" />
+    <Property Name="Ped_Percentual_Faturado" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Devolução" Type="Boolean" Nullable="false" />
+    <Property Name="IdMovOrigem" Type="Int32" />
+    <Property Name="IdOrçamentoUtilizado" Type="Int32" />
+    <Property Name="IdEntregador" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Rentabilidade" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ErroDigitação" Type="Boolean" Nullable="false" />
+    <Property Name="Validade" Type="DateTime" Precision="3" />
+    <Property Name="PedidoLiberadoFaturamento" Type="Boolean" Nullable="false" />
+    <Property Name="LiberaçãoUsuário" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PedidoBloqCrédito" Type="Boolean" Nullable="false" />
+    <Property Name="Volume" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DescontoComissão" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DataMovimento" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Impresso" Type="Boolean" Nullable="false" />
+    <Property Name="PrazoEntrega" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OrcamentoOffLine" Type="Boolean" Nullable="false" />
+    <Property Name="DataSaida" Type="DateTime" Precision="3" />
+    <Property Name="ImprimiuEtiqueta" Type="Boolean" Nullable="false" />
+    <Property Name="Internet" Type="Boolean" Nullable="false" />
+    <Property Name="CodinomeAtividade" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="TotalICMSubstTrib" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="BaseCalculoICMSubstTrib" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="TransferenciaConferida" Type="Boolean" Nullable="false" />
+    <Property Name="IdUsuarioCancelamento" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DescontoFinanceiro" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="IdUsuarioDesconto" Type="Int32" Nullable="false" />
+    <Property Name="ValorTroca" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ERegistroEspecial" Type="Boolean" Nullable="false" />
+    <Property Name="DevolucaoAprovada" Type="Boolean" Nullable="false" />
+    <Property Name="ColetarDevolucao" Type="Boolean" Nullable="false" />
+    <Property Name="EmitirCartaCorrecaoDevolucao" Type="Boolean" Nullable="false" />
+    <Property Name="ContatoDevolucao" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EdicaoLiberada" Type="Boolean" Nullable="false" />
+    <Property Name="ValorCreditoDebito" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="IdEmissaoBoleto" Type="Int32" Nullable="false" />
+    <Property Name="BaseCalculoEsp18" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="BaseCalculoEsp12" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="BaseCalculoEsp18ST" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="BaseCalculoEsp12ST" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorICMPagoSubst" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="UtilizaRegEspSubstTrib" Type="Boolean" Nullable="false" />
+    <Property Name="DataLiberacaoPagtoComissaoDev" Type="DateTime" Precision="3" />
+    <Property Name="ConfereNF" Type="Boolean" />
+    <Property Name="ValorJuros" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ConcluidoFinanceiroDevolucao" Type="Boolean" Nullable="false" />
+    <Property Name="IdMensagemTroca" Type="Int32" />
+    <Property Name="NumeroCupom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TempoPrevisto" Type="Int32" />
+    <Property Name="LocalFaturamento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UtilizaCustoComercial" Type="Boolean" Nullable="false" />
+    <Property Name="TotalCompraDig" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="NaturezaSubstTrib" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="StatusFinanceiroDevolucao" Type="Int32" />
+    <Property Name="IdMovimentoDescDevolucao" Type="Int32" />
+    <Property Name="IdFuncEmbalagem" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="PercImpostoIVA" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="TotalImpostoIVA" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Caixa" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ValorEntregue" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="IdUsuarioReImpressao" Type="Int32" />
+    <Property Name="MotivoReImpressao" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RentabilidadeMarkup" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="RentabilidadeCustoMedio" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="NroConfEntrada" Type="Int32" />
+    <Property Name="IdRota" Type="Int32" />
+    <Property Name="ArquivoDePedidoNoFornecedorGerado" Type="Boolean" Nullable="false" />
+    <Property Name="PercentualComissaoDigitadoPedSai" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="TotalValorCustoMedio" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="BaseCalculoEsp25" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="BaseCalculoEsp25ST" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="IdUsuLibMovPerdido" Type="Int32" />
+    <Property Name="cur_per_brinde" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="bit_modelo" Type="Boolean" Nullable="false" />
+    <Property Name="int_nro_termo" Type="Int32" Nullable="false" />
+    <Property Name="fk_int_id_statuspedido" Type="Int32" />
+    <Property Name="fk_int_tipo_movimento_faturar" Type="Int32" />
+    <Property Name="str_solicitante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="dte_conclusao_movimento" Type="DateTime" Precision="3" />
+    <Property Name="cur_vlr_outro_desconto" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_vlr_outro_acrescimo" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BaseCalculoEsp7" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="BaseCalculoEsp7ST" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="BaseCalculoEsp19" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="BaseCalculoEsp19ST" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="cur_VlrTotalItensPromocao" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="int_PDCConfParcialmente" Type="Int16" Nullable="false" />
+    <Property Name="int_IdMovimentoConsignacao" Type="Int32" />
+    <Property Name="bit_MovimentoAgrupado" Type="Boolean" Nullable="false" />
+    <Property Name="cur_FatMinima" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="cur_vlr_TransporteFrete" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="str_obs_2" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="cur_vlr_TotalISS" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="dte_Transporte" Type="DateTime" Precision="3" />
+    <Property Name="fk_int_UsuarioEdicao" Type="Int32" />
+    <Property Name="str_processo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="str_prazoentrega" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="str_vigenciacontrato" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="bit_Ratear" Type="Boolean" Nullable="false" />
+    <Property Name="int_TipoLicitacao" Type="Byte" />
+    <Property Name="fk_int_IdMovimentoOffLine" Type="Int32" />
+    <Property Name="int_NroDocumentoOffLine" Type="Int32" />
+    <Property Name="bit_ExportaOffLine" Type="Boolean" />
+    <Property Name="bit_ImportaOffLine" Type="Boolean" />
+    <Property Name="cur_desc_CredDevolucao" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="int_SolicitouPedido" Type="Int32" />
+    <Property Name="str_ContatoCliente" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="dte_Despacho" Type="DateTime" Precision="3" />
+    <Property Name="bit_ConferenciaDespacho" Type="Boolean" Nullable="false" />
+    <Property Name="bit_AtualizaCustoMedio" Type="Boolean" Nullable="false" />
+    <Property Name="AberturaLicitacao" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AgenciaLicitacao" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="AutorizaçãoPedido" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="BancoLicitacao" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Chassi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ContaCorrenteLicitacao" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DescriçãoDescontoComissão" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DescricaoFinanceiroDevolucao" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="DescriçãoOutrasDespesas" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EncerramentoLicitacao" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MensagemDocumento" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="MotivoCancelamento" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="NroLicitacao" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="str_deslayout" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="str_LocalGarantia" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="str_obs_Despacho" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="str_PathDocumento" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TransportadoraDocumento" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UsuarioLiberacaoDigPercentualComissao" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UsuarioRegistroEspecial" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="int_TipoReceituarioMed" Type="Byte" />
+    <Property Name="dte_PrescricaoMed" Type="DateTime" Precision="3" />
+    <Property Name="str_nm_PrescritorMed" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="str_nro_RegistroProfissional" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="str_ConselhoProfissional" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="fk_str_EstadoConselho" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="str_nro_NoticacaoMed" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="bit_GNRE" Type="Boolean" Nullable="false" />
+    <Property Name="int_IdUsuarioAlterouVendedor" Type="Int32" />
+    <Property Name="bit_ImprimiuRelatorioRomaneio" Type="Boolean" />
+    <Property Name="bit_CobrarSubstTributariaCliente" Type="Boolean" />
+    <Property Name="dbl_PercRentabilidadeMinimaOffLine" Type="Double" />
+    <Property Name="int_UsuarioDesbloqueouRentabildadeMinimaIntegrator" Type="Int32" />
+    <Property Name="fk_int_IdEmpresaOffLine" Type="Int32" />
+    <Property Name="Mov_Estoque1" Type="Int32" />
+    <Property Name="bit_ExportaMovimentoSupervisor" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Mov_Estoque_Detalhes" Relationship="Self.FK_Mov_Estoque_Detalhes_Mov_Estoque" FromRole="Mov_Estoque" ToRole="Mov_Estoque_Detalhes" />
+    <NavigationProperty Name="Tab_Cadastro" Relationship="Self.FK_Mov_Estoque_Tab_Cadastro" FromRole="Mov_Estoque" ToRole="Tab_Cadastro" />
+    <NavigationProperty Name="Tab_Estado" Relationship="Self.FK_Mov_Estoque_Tab_Estado" FromRole="Mov_Estoque" ToRole="Tab_Estado" />
+  </EntityType>
+  <EntityType Name="Mov_Estoque_Detalhes">
+    <Key>
+      <PropertyRef Name="IdDetalhe" />
+    </Key>
+    <Property Name="IdMovimento" Type="Int32" />
+    <Property Name="Quantidade" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="SaldoAnterior" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorUnitário" Type="Double" Nullable="false" />
+    <Property Name="PercIPI" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PercICM" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="IdDetalhe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ValorCustoUnitário" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorCustoMédioUnitário" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="DescriçãoDetalhada" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PesoUnitário" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PercBaseCálculoICM" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PercDesconto" Type="Double" Nullable="false" />
+    <Property Name="IdDetalhePedido" Type="Int32" />
+    <Property Name="IdItem" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="PendenteLiberado" Type="Boolean" Nullable="false" />
+    <Property Name="RentabilidadeItem" Type="Double" />
+    <Property Name="QuantidadeUsada" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ValorUnitárioUsado" Type="Double" />
+    <Property Name="Largura" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Comprimento" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Quantidade2" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PercComissãoProduto" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BaseComissão" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Lote" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Ordem" Type="Int32" />
+    <Property Name="ValorDesconto" Type="Double" Nullable="false" />
+    <Property Name="QuantidadeDevolvida" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CustoMedioContabil" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="IdFuncionario" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="CalculaComissao" Type="Boolean" Nullable="false" />
+    <Property Name="PrecoFabrica" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PercRepasse" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PrMaxConsumidor" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="SaldoFAnterior" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="SaldoBRAnterior" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorUnitRecuperado" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CPF" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorUnitarioReal" Type="Double" Nullable="false" />
+    <Property Name="ValorRepasse" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="QuantidadeDigitada" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorPresente" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorInflacao" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Data" Type="DateTime" Precision="3" />
+    <Property Name="RentabilidadeMarkup" Type="Double" Nullable="false" />
+    <Property Name="RentabilidadeCustoMedio" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="bit_item_promocional" Type="Boolean" Nullable="false" />
+    <Property Name="bit_item_brinde_subst" Type="Boolean" Nullable="false" />
+    <Property Name="bit_item_brinde" Type="Boolean" Nullable="false" />
+    <Property Name="str_DescricaoDetalhadaLote" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="PercICMSSubstTributaria" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="int_Ordem_Item" Type="Int32" />
+    <Property Name="fk_int_IdMovimento" Type="Int32" />
+    <Property Name="bit_AtualizarCusto" Type="Boolean" Nullable="false" />
+    <Property Name="bit_OrigemLotesSelecao" Type="Boolean" Nullable="false" />
+    <Property Name="fk_int_Programado" Type="Int32" />
+    <Property Name="str_IdItemNF" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="cur_custocontabil" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="cur_custocontabilmedio" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="cur_vlr_UltimaCompra" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="bit_ItemRefrigerado" Type="Boolean" Nullable="false" />
+    <Property Name="dbl_perc_ReducaoSubstTribPMC" Type="Double" Nullable="false" />
+    <Property Name="cur_qtd_Falta" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_CustoNegociado" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_vlr_UnitarioMinimo" Type="Double" />
+    <Property Name="cur_RentMinimo" Type="Double" />
+    <Property Name="cur_CustoUnitItemSemComissao" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="bit_ItemPerdido" Type="Boolean" Nullable="false" />
+    <Property Name="cur_ValorSubstituicaoTributaria" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_BaseSubstituicaoTributaria" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_RentMinimaItem" Type="Double" />
+    <Property Name="UnidadeUsada" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="PedidoCompra" Type="Double" Nullable="false" />
+    <Property Name="QuantidadeBloqueada" Type="Double" Nullable="false" />
+    <Property Name="QuantidadeFaturada" Type="Double" Nullable="false" />
+    <Property Name="QuantidadeConferidaPedVenda" Type="Double" Nullable="false" />
+    <Property Name="fk_int_IdTemp" Type="Int32" />
+    <Property Name="dbl_ValorUnitarioUsadoCasaDecimal" Type="Double" />
+    <NavigationProperty Name="Mov_Estoque" Relationship="Self.FK_Mov_Estoque_Detalhes_Mov_Estoque" FromRole="Mov_Estoque_Detalhes" ToRole="Mov_Estoque" />
+    <NavigationProperty Name="Tab_Estoque" Relationship="Self.FK_Mov_Estoque_Detalhes_Tab_Estoque" FromRole="Mov_Estoque_Detalhes" ToRole="Tab_Estoque" />
+  </EntityType>
+  <EntityType Name="Tab_Cadastro">
+    <Key>
+      <PropertyRef Name="Codinome" />
+    </Key>
+    <Property Name="Codinome" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Precision="3" />
+    <Property Name="NomeFantasia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Jurídica" Type="Boolean" Nullable="false" />
+    <Property Name="AtividadeEmpresa" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Estado" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="País" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CEP" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="Fone1" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Fone2" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="FAX" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="DataAniversário" Type="DateTime" Precision="3" />
+    <Property Name="CGC" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Name="InscEstadual" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Name="Vendedor" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Classificação" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="DataÚltima" Type="DateTime" Precision="3" />
+    <Property Name="Observação1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AFazer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Seleção" Type="Boolean" Nullable="false" />
+    <Property Name="NroOLE" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ÚltimaCompra" Type="DateTime" Precision="3" />
+    <Property Name="ClienteFornecedor" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Celular" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="IdTipoFaturamento" Type="Int32" />
+    <Property Name="Doc" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="AreaInteresse2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="ÉIsentoInscriçãoEstadual" Type="Boolean" Nullable="false" />
+    <Property Name="IdGrupoCad" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="IdSubCadGrupo" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="IdUsuário" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CréditoAVencer" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CréditoVencidas" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CréditoPedido" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RentabilidadeMínima" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ÉConsumidorFinal" Type="Boolean" Nullable="false" />
+    <Property Name="IdCidade" Type="Int32" />
+    <Property Name="IdFuncionário" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="CobrarFrete" Type="Boolean" Nullable="false" />
+    <Property Name="ÁreaInteresse" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="NãoExibeWeb" Type="Boolean" Nullable="false" />
+    <Property Name="RecebeComissãoEspecial" Type="Boolean" Nullable="false" />
+    <Property Name="Serie" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Especie" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="IdTitular" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="CurvaABCRent" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="CurvaABCDias" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="CurvaABCVendas" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="PartABCVendas" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CompraProdutoControlado" Type="Boolean" Nullable="false" />
+    <Property Name="IcmEspecificoManaus" Type="Boolean" Nullable="false" />
+    <Property Name="Complemento" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="NaoIncluiSugestaoCompras" Type="Boolean" Nullable="false" />
+    <Property Name="Agencia" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="VerificadorAgencia" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="NumeroConta" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="DigitoConta" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="DigitoAgConta" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="CodigoBanco" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="TipoConta" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="CodTransportadora" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="OrgaoPublico" Type="Boolean" Nullable="false" />
+    <Property Name="CRM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NaoCompraGrupo" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="PercDescontoCliente" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="EEstabelecimentoFilial" Type="Boolean" Nullable="false" />
+    <Property Name="StatusFinanceiro" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="CaixaDefaultBoleto" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PrazoProtesto" Type="Int32" Nullable="false" />
+    <Property Name="StatusConsulta" Type="Int32" />
+    <Property Name="DataExpedicao" Type="DateTime" Precision="3" />
+    <Property Name="NaoVerificaCreditos" Type="Boolean" Nullable="false" />
+    <Property Name="CodigoAntigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NroEndereco" Type="Int32" />
+    <Property Name="SPCEfetiv" Type="DateTime" Precision="3" />
+    <Property Name="SPCReabilit" Type="DateTime" Precision="3" />
+    <Property Name="SomaFreteNaBaseIcms" Type="Boolean" Nullable="false" />
+    <Property Name="SomaOutrasDespNaBaseIcms" Type="Boolean" Nullable="false" />
+    <Property Name="SomaFreteNaBaseIpi" Type="Boolean" Nullable="false" />
+    <Property Name="SomaOutrasDespNaBaseIpi" Type="Boolean" Nullable="false" />
+    <Property Name="CobrarFreteTerceiros" Type="Boolean" Nullable="false" />
+    <Property Name="NaoCobrarTarifaCobranca" Type="Boolean" Nullable="false" />
+    <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ramal1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Ramal2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GeraPedidoNoFornecedor" Type="Boolean" Nullable="false" />
+    <Property Name="PercentualComissao" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NomeEmpresa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fidelidade" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="str_cargo_contato" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cur_per_brinde" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="bit_utiliza_subst_trib" Type="Boolean" Nullable="false" />
+    <Property Name="bit_bloqueiacompra" Type="Boolean" Nullable="false" />
+    <Property Name="int_tipomovimento_pri" Type="Int32" />
+    <Property Name="cur_per_tipomovimento_pri" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="int_tipomovimento_seg" Type="Int32" />
+    <Property Name="bit_bloqueiacomprasemcredito" Type="Boolean" Nullable="false" />
+    <Property Name="cur_perc_frete_padrao" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="str_num_alvara" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dte_vencimento_alvara" Type="DateTime" Precision="3" />
+    <Property Name="DataUltimaAtualizacao" Type="DateTime" Precision="3" />
+    <Property Name="SenhaWeb" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fk_int_indicacao" Type="Int32" />
+    <Property Name="int_ClassificacaoOrgaoPublico" Type="Int32" />
+    <Property Name="int_TempoGarantiaProduto" Type="Int32" />
+    <Property Name="dbl_PercFreteRentMix" Type="Double" />
+    <Property Name="Endereço" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bairro" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Contato" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="dbl_PercAbaterReducaoST" Type="Double" Nullable="false" />
+    <Property Name="bit_BloqMvtDocumentos" Type="Boolean" Nullable="false" />
+    <Property Name="dbl_perc_DescFretePesado" Type="Double" Nullable="false" />
+    <Property Name="dbl_perc_DescRefrigerado" Type="Double" Nullable="false" />
+    <Property Name="dbl_perc_DescNormal" Type="Double" Nullable="false" />
+    <Property Name="cur_FatMinima" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="dte_VencimentoLimiteCredito" Type="DateTime" Precision="3" />
+    <Property Name="dte_CreditoAVencer" Type="DateTime" Precision="3" />
+    <Property Name="str_Farmaceutico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dte_NaoExibiAniversario" Type="DateTime" Precision="3" />
+    <Property Name="bit_Exterior" Type="Boolean" Nullable="false" />
+    <Property Name="fk_int_OrgaoExpedidor" Type="Int32" />
+    <Property Name="str_MotivoAlteracao" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="bit_NaoBloqCheqPre" Type="Boolean" Nullable="false" />
+    <Property Name="fk_int_SituacaoSerasa" Type="Int32" />
+    <Property Name="dte_UltimaConsulta" Type="DateTime" Precision="3" />
+    <Property Name="bit_CobrarSubstTributariaCliente" Type="Boolean" Nullable="false" />
+    <Property Name="dbl_PercRentabilidadeMinimaOffLine" Type="Double" />
+    <Property Name="bit_ImprimeDuplicata" Type="Boolean" Nullable="false" />
+    <Property Name="dte_Fundacao" Type="DateTime" Precision="3" />
+    <Property Name="int_TipoSubstTributaria" Type="Byte" Nullable="false" />
+    <Property Name="bit_NaoAplicaDescBaseCalculoSubstTrib" Type="Boolean" Nullable="false" />
+    <Property Name="bit_IndustriaFabricante" Type="Boolean" Nullable="false" />
+    <Property Name="cur_CurvaABCVendasRentPonderada" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_CurvaABCVendasPartInd" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_CurvaABCVendasPartAcum" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_CurvaABCRentValor" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_CurvaABCRentPartInd" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_CurvaABCRentPartAcum" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_CurvaABCDiasValorAtraso" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_CurvaABCDiasPartInd" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_CurvaABCDiasPartAcum" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="int_IdUsuarioTMK" Type="Int32" />
+    <Property Name="pk_int_Cadastro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="str_IdContaDefault" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="str_IdCentroAcumulacaoDefault" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="str_EmailNFe" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="bit_Medico" Type="Boolean" Nullable="false" />
+    <Property Name="str_ConselhoProfissional" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="str_EstadoConselho" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="cur_PercLimite" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="bit_MonitoradoSERASA" Type="Boolean" Nullable="false" />
+    <Property Name="str_Celular" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="int_DiasChecagemCredito" Type="Int32" />
+    <Property Name="bit_NaoCalcularSTNaCompra" Type="Boolean" Nullable="false" />
+    <Property Name="cur_PercentualReducaoBaseCalculoICMSSTVenda" Type="Double" />
+    <Property Name="bit_ObrigarPercAcrecimosItens" Type="Boolean" Nullable="false" />
+    <Property Name="bit_SimplesFederal" Type="Boolean" Nullable="false" />
+    <Property Name="ContaContabilCadastro" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="int_ContaContabilCadastroEntrada" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="fk_int_Classificacao" Type="Int32" />
+    <Property Name="fk_int_GrupoDesconto" Type="Int32" />
+    <Property Name="fk_int_Pais" Type="Int32" />
+    <Property Name="int_TipoTransporteDefault" Type="Int32" />
+    <Property Name="str_CaixaPostal_PE_TIVIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="int_TipoSTCobravelSaida" Type="Int32" />
+    <Property Name="cur_PercentualReembolsoST" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="bit_ParticipaCat169" Type="Boolean" Nullable="false" />
+    <Property Name="bit_NaoTributa_PIS_COFINS" Type="Boolean" Nullable="false" />
+    <Property Name="int_PrazoMedioParcelas" Type="Int16" />
+    <Property Name="int_MesesBloqueioSerasa" Type="Byte" />
+    <Property Name="cur_CreditoConsignacao" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="bit_NaoVisualizaDescontoItemDanfe" Type="Boolean" />
+    <Property Name="bit_AceitaTrocaProdutos" Type="Boolean" Nullable="false" />
+    <Property Name="int_QtdeCasasDecimaisItens" Type="Int32" Nullable="false" />
+    <Property Name="bit_ClienteIntegracao" Type="Boolean" Nullable="false" />
+    <Property Name="bit_UtilizaDesoneracao" Type="Boolean" Nullable="false" />
+    <Property Name="bit_Hospital" Type="Boolean" Nullable="false" />
+    <Property Name="bit_Convenio" Type="Boolean" Nullable="false" />
+    <Property Name="int_ImpressaoDanfe" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Mov_Estoque" Relationship="Self.FK_Mov_Estoque_Tab_Cadastro" FromRole="Tab_Cadastro" ToRole="Mov_Estoque" />
+    <NavigationProperty Name="Tab_Estoque" Relationship="Self.FK_Tab_Estoque_Tab_Cadastro" FromRole="Tab_Cadastro" ToRole="Tab_Estoque" />
+    <NavigationProperty Name="Tab_Estado" Relationship="Self.Reference34" FromRole="Tab_Cadastro" ToRole="Tab_Estado" />
+  </EntityType>
+  <EntityType Name="Tab_Estado">
+    <Key>
+      <PropertyRef Name="SiglaEstado" />
+    </Key>
+    <Property Name="SiglaEstado" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NomeEstado" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="AlíquotaICM" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PercRepasse" Type="Double" Nullable="false" />
+    <Property Name="PercPrFabrica" Type="Double" Nullable="false" />
+    <Property Name="SomaPercPrFabrica" Type="Boolean" Nullable="false" />
+    <Property Name="int_CodigoIBGE" Type="Int32" />
+    <Property Name="int_TipoSubstTributaria" Type="Int32" Nullable="false" />
+    <Property Name="dbl_CreditoPresumido" Type="Double" Nullable="false" />
+    <Property Name="dbl_AliquotaInterna" Type="Double" />
+    <Property Name="dbl_AliquotaCompra" Type="Double" Nullable="false" />
+    <Property Name="dbl_ReducaoBaseCalculoICMSST" Type="Double" Nullable="false" />
+    <Property Name="dbl_ReducaoBaseCalculoICMSSTIndFab" Type="Double" Nullable="false" />
+    <Property Name="bit_UtilizarFreteOutrasDespesasIPIBaseCalcSubstTribCompraDentro" Type="Boolean" Nullable="false" />
+    <Property Name="bit_ReducaoCalculoICMSSTVenda" Type="Boolean" Nullable="false" />
+    <Property Name="fk_int_RegiaoPais" Type="Int32" />
+    <Property Name="bit_UtilizarCAT54" Type="Boolean" Nullable="false" />
+    <Property Name="bit_UtilizarCAT101" Type="Boolean" Nullable="false" />
+    <Property Name="bit_UtilizarCAT113" Type="Boolean" Nullable="false" />
+    <Property Name="bit_UtilizarCAT169" Type="Boolean" Nullable="false" />
+    <Property Name="bit_CAT132" Type="Boolean" Nullable="false" />
+    <Property Name="bit_AplicarCalculoSTMVAVenda" Type="Boolean" Nullable="false" />
+    <Property Name="bit_AplicarRegraSTCargaTributariaMediaApurada" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Mov_Estoque" Relationship="Self.FK_Mov_Estoque_Tab_Estado" FromRole="Tab_Estado" ToRole="Mov_Estoque" />
+    <NavigationProperty Name="Tab_Cadastro" Relationship="Self.Reference34" FromRole="Tab_Estado" ToRole="Tab_Cadastro" />
+  </EntityType>
+  <EntityType Name="Tab_Estoque">
+    <Key>
+      <PropertyRef Name="IdItem" />
+    </Key>
+    <Property Name="Grupo" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Referência" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Categoria" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CódigoFábrica" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Peso" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Volume" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Fornecedor" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Seleção" Type="Boolean" Nullable="false" />
+    <Property Name="CódigoVelho" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DescriçãoDetalhada" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Exclusivo" Type="Boolean" Nullable="false" />
+    <Property Name="ExclusivoEmpresa" Type="Int32" />
+    <Property Name="QUD" Type="Int32" />
+    <Property Name="Localização" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PercBaseCálculoICM" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CódSitTributáriaA" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="CódSitTributáriaB" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="FormaTributação" Type="Int16" />
+    <Property Name="ReduçãoBaseCálculoICMDentro" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ReduçãoBaseCálculoICMFora" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Fabricado" Type="Boolean" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Precision="3" />
+    <Property Name="IdGarantia" Type="Int32" />
+    <Property Name="IdItem" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdUsuário" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Gramatura" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IdMarca" Type="Int32" />
+    <Property Name="Largura" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Altura" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="EndereçoFoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TipoItem" Type="Int32" />
+    <Property Name="códigobarra" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Localização2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UnidadeCompra" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ICMS" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IdPrincípioAtivo" Type="Int32" />
+    <Property Name="SimilarPrincípioAtivo" Type="Boolean" Nullable="false" />
+    <Property Name="TributaPisCofins" Type="Boolean" Nullable="false" />
+    <Property Name="RegistroSaude" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="EGenerico" Type="Boolean" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoCMDentro7" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMFora7" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoCMDentro12" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMFora12" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="BloqueadoVigSanitaria" Type="Boolean" Nullable="false" />
+    <Property Name="CodSitTributariaAFora" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="CodSitTributariaBFora" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="FormaTributacaoFora" Type="Int16" />
+    <Property Name="ICMSFora" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CodSitTributariaADentroENT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="CodSitTributariaBDentroENT" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="FormaTributacaoDentroENT" Type="Int16" />
+    <Property Name="ICMSDentroENT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ReducaoBaseCalculoICMDentroENT" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMDentro7ENT" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMDentro12ENT" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CodSitTributariaAForaENT" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="CodSitTributariaBForaENT" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="FormaTributacaoForaENT" Type="Int16" />
+    <Property Name="ICMSForaENT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ReducaoBaseCalculoICMForaENT" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMFora7ENT" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMFora12ENT" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorSitTributariaSaidaFora" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorSitTributariaSaidaDentro" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorSitTributariaEntradaFora" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ValorSitTributariaEntradaDentro" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="IsentoOrgaoPublico" Type="Byte" />
+    <Property Name="UtilizaRefrigeracao" Type="Boolean" Nullable="false" />
+    <Property Name="CurvaABCVendas" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CurvaABCLucratividade" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CurvaABCEstoque" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CurvaABCVendPartInd" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurvaABCVendPartAcu" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurvaABCValorVenda" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurvaABCRentabilidade" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurvaABCMargemContrib" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurvaABCContPartInd" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurvaABCContPartAcu" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurvaABCValorCusto" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurvaABCCustPartInd" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurvaABCCustPartAcu" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ExigeLaudoTecnico" Type="Boolean" Nullable="false" />
+    <Property Name="AgrupaICMForaEnt" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="UtilizaPEM" Type="Boolean" Nullable="false" />
+    <Property Name="TemSubstTrib" Type="Boolean" Nullable="false" />
+    <Property Name="PercReducaoSubstTrib18" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PercReducaoSubstTrib12" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PercLPSubstTrib" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PercLNSubstTrib" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="EProdEtico" Type="Boolean" Nullable="false" />
+    <Property Name="RentMinimaMarkup" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CodBras_Medi" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CodBras_Lab" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CodBras_Apre" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ProdutoTabelado" Type="Boolean" Nullable="false" />
+    <Property Name="DuplicaBaseCalculoICM" Type="Boolean" Nullable="false" />
+    <Property Name="PercentualComissao" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CodigoNoFornecedor" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Descrição" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CodigoNoFornecedorStaCruz" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PercICMSSubstTributariaFora" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="PercICMSSubstTributariaDentro" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="str_desclicitacao" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="str_desctecnica" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DataUltimaAtualizacao" Type="DateTime" Precision="3" />
+    <Property Name="bit_UltraTest" Type="Boolean" Nullable="false" />
+    <Property Name="bit_VisivelWeb" Type="Boolean" Nullable="false" />
+    <Property Name="bit_ProdutoPromocionalWeb" Type="Boolean" Nullable="false" />
+    <Property Name="dbl_PercPIS" Type="Double" />
+    <Property Name="dbl_PercCOFINS" Type="Double" />
+    <Property Name="int_StatusCadastro" Type="Int32" />
+    <Property Name="IsentoOrgaoPublicoEstadual" Type="Boolean" Nullable="false" />
+    <Property Name="str_CodigoNoFornecedorBaldacci" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="bit_ProdutoPesado" Type="Boolean" Nullable="false" />
+    <Property Name="bit_produtosimilar" Type="Boolean" Nullable="false" />
+    <Property Name="cur_Comprimento" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="pk_int_Estoque" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="str_Procedencia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="cur_ReducaoBaseCalculoICMFora17" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="cur_ReducaoBaseCalculoICMDentro17" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="cur_ReducaoBaseCalculoICMFora17ENT" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="cur_ReducaoBaseCalculoICMDentro17ENT" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="str_DetentoraProduto" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="int_OrigemProduto" Type="Int32" />
+    <Property Name="bit_IsentoRegistroSaude" Type="Boolean" Nullable="false" />
+    <Property Name="fk_int_classificacao" Type="Int32" />
+    <Property Name="str_CurvaABCQtde" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cur_CurvaABCQtdePartInd" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_CurvaABCQtdePartAcu" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_CurvaABCValorQtde" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="bit_RedSomenteNaoConsFinalDentroEstado" Type="Boolean" Nullable="false" />
+    <Property Name="bit_RedSomenteNaoConsFinalForaEstado" Type="Boolean" Nullable="false" />
+    <Property Name="fk_int_ClassificacaoDesconto" Type="Int32" />
+    <Property Name="dbl_PercPISEntrada" Type="Double" Nullable="false" />
+    <Property Name="dbl_PercCOFINSEntrada" Type="Double" Nullable="false" />
+    <Property Name="bit_TributaPisCofinsEntrada" Type="Boolean" Nullable="false" />
+    <Property Name="dbl_PercIVAForaSAI" Type="Double" Nullable="false" />
+    <Property Name="dbl_PercMVAForaSAI" Type="Double" Nullable="false" />
+    <Property Name="dbl_PercIVADentroSAI" Type="Double" Nullable="false" />
+    <Property Name="dbl_PercMVADentroSAI" Type="Double" Nullable="false" />
+    <Property Name="dbl_PercIVADentroENT" Type="Double" Nullable="false" />
+    <Property Name="dbl_PercMVADentroENT" Type="Double" Nullable="false" />
+    <Property Name="dbl_PercIVAForaENT" Type="Double" Nullable="false" />
+    <Property Name="dbl_PercMVAForaENT" Type="Double" Nullable="false" />
+    <Property Name="str_CodSitTributariaBForaConsFinal" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="fk_int_apresentacao" Type="Int32" />
+    <Property Name="cur_ICMSForaConsFinal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="dbl_AliquotaINSS" Type="Double" />
+    <Property Name="dbl_AliquotaISS" Type="Double" />
+    <Property Name="str_ValidadeRegistro" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="str_ProcessoRegistro" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="cur_TemperaturaMaxima" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_TemperaturaMinima" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cur_Umidade" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="str_Portaria" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fk_int_AmparoLegalPISCOFINS" Type="Int32" />
+    <Property Name="bit_ProdutoObsoleto" Type="Boolean" Nullable="false" />
+    <Property Name="bit_ProdutoEmFalta" Type="Boolean" Nullable="false" />
+    <Property Name="str_CodSitTributariaPisCofinsSAI" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="str_CodSitTributariaPisCofinsENT" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="str_UnidadeVenda" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="dbl_ConversaoMenorCompra" Type="Double" />
+    <Property Name="dbl_ConversaoMenorVenda" Type="Double" />
+    <Property Name="fk_int_IdUnItemVenda" Type="Int32" />
+    <Property Name="fk_int_IdUnItemCompra" Type="Int32" />
+    <Property Name="bit_MedicamentoExcepcional" Type="Boolean" Nullable="false" />
+    <Property Name="str_CodigoABCFarma" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="bit_IMS" Type="Boolean" Nullable="false" />
+    <Property Name="int_QuantidadeVenda" Type="Int32" />
+    <Property Name="bit_NaoObrigaMedico" Type="Boolean" Nullable="false" />
+    <Property Name="str_caminhoRegistro" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="bit_naoProprio" Type="Boolean" Nullable="false" />
+    <Property Name="bit_renovaAnvisa" Type="Boolean" Nullable="false" />
+    <Property Name="bit_tabelado" Type="Boolean" Nullable="false" />
+    <Property Name="bit_esteril" Type="Boolean" Nullable="false" />
+    <Property Name="int_numAnvisa" Type="Int32" />
+    <Property Name="str_cnpj" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="str_razaoSocial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bit_execaoNCMPisCofins" Type="Boolean" Nullable="false" />
+    <Property Name="bit_execaoNCMEntrada" Type="Boolean" Nullable="false" />
+    <Property Name="bit_execaoNCMSaida" Type="Boolean" Nullable="false" />
+    <Property Name="fk_int_Esterilizante" Type="Int32" />
+    <Property Name="fk_int_Composicao" Type="Int32" />
+    <Property Name="fk_int_Importador" Type="Int32" />
+    <Property Name="fk_int_Mensagem" Type="Int32" />
+    <Property Name="bit_mensagemEtiqueta" Type="Int32" Nullable="false" />
+    <Property Name="str_descricaoEtiqueta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="str_descricaoEtiqueta2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="int_classe" Type="Int32" />
+    <Property Name="str_DCB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="bit_Outros" Type="Boolean" Nullable="false" />
+    <Property Name="str_Observacao" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="dte_ValidadeObservacao" Type="DateTime" Precision="3" />
+    <Property Name="fk_int_Modelo" Type="Int32" />
+    <Property Name="str_UnidadeFabricacao" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="dbl_ConversaoMenorFabricacao" Type="Double" />
+    <Property Name="fk_int_IdUnItemFabricacao" Type="Int32" />
+    <Property Name="bit_Embalagem" Type="Boolean" Nullable="false" />
+    <Property Name="fk_int_TipoItem" Type="Int32" />
+    <Property Name="str_PathLaudo" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="bit_Nacional" Type="Boolean" Nullable="false" />
+    <Property Name="bit_ManualBoasPraticas" Type="Boolean" Nullable="false" />
+    <Property Name="str_ManualBoasPraticas" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="str_COD_TAB" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="str_COD_GRU" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="str_MARCA_COM" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="bit_MaterialUsoConsumo" Type="Boolean" Nullable="false" />
+    <Property Name="bit_UtilizaDesoneracao" Type="Boolean" Nullable="false" />
+    <Property Name="int_MotivoDesoneracao" Type="Int32" Nullable="false" />
+    <Property Name="str_CodigoImportacao" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="bit_AplicarRegraCAP" Type="Boolean" Nullable="false" />
+    <Property Name="bit_ExcecaoNCMDesoneracao" Type="Boolean" Nullable="false" />
+    <Property Name="bit_UtilizaInsumo" Type="Boolean" Nullable="false" />
+    <Property Name="ClassificaçãoFiscal" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Mov_Estoque_Detalhes" Relationship="Self.FK_Mov_Estoque_Detalhes_Tab_Estoque" FromRole="Tab_Estoque" ToRole="Mov_Estoque_Detalhes" />
+    <NavigationProperty Name="Tab_Cadastro" Relationship="Self.FK_Tab_Estoque_Tab_Cadastro" FromRole="Tab_Estoque" ToRole="Tab_Cadastro" />
+  </EntityType>
+  <Association Name="FK_Mov_Estoque_Detalhes_Mov_Estoque">
+    <End Role="Mov_Estoque" Type="Self.Mov_Estoque" Multiplicity="0..1" />
+    <End Role="Mov_Estoque_Detalhes" Type="Self.Mov_Estoque_Detalhes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mov_Estoque">
+        <PropertyRef Name="IdMovimento" />
+      </Principal>
+      <Dependent Role="Mov_Estoque_Detalhes">
+        <PropertyRef Name="IdMovimento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mov_Estoque_Tab_Cadastro">
+    <End Role="Tab_Cadastro" Type="Self.Tab_Cadastro" Multiplicity="0..1" />
+    <End Role="Mov_Estoque" Type="Self.Mov_Estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tab_Cadastro">
+        <PropertyRef Name="Codinome" />
+      </Principal>
+      <Dependent Role="Mov_Estoque">
+        <PropertyRef Name="IdCadastro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mov_Estoque_Tab_Estado">
+    <End Role="Tab_Estado" Type="Self.Tab_Estado" Multiplicity="0..1" />
+    <End Role="Mov_Estoque" Type="Self.Mov_Estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tab_Estado">
+        <PropertyRef Name="SiglaEstado" />
+      </Principal>
+      <Dependent Role="Mov_Estoque">
+        <PropertyRef Name="fk_str_EstadoConselho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mov_Estoque_Detalhes_Tab_Estoque">
+    <End Role="Tab_Estoque" Type="Self.Tab_Estoque" Multiplicity="0..1" />
+    <End Role="Mov_Estoque_Detalhes" Type="Self.Mov_Estoque_Detalhes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tab_Estoque">
+        <PropertyRef Name="IdItem" />
+      </Principal>
+      <Dependent Role="Mov_Estoque_Detalhes">
+        <PropertyRef Name="IdItem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tab_Estoque_Tab_Cadastro">
+    <End Role="Tab_Cadastro" Type="Self.Tab_Cadastro" Multiplicity="0..1" />
+    <End Role="Tab_Estoque" Type="Self.Tab_Estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tab_Cadastro">
+        <PropertyRef Name="Codinome" />
+      </Principal>
+      <Dependent Role="Tab_Estoque">
+        <PropertyRef Name="Fornecedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference34">
+    <End Role="Tab_Estado" Type="Self.Tab_Estado" Multiplicity="0..1" />
+    <End Role="Tab_Cadastro" Type="Self.Tab_Cadastro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tab_Estado">
+        <PropertyRef Name="SiglaEstado" />
+      </Principal>
+      <Dependent Role="Tab_Cadastro">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OuroBaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Mov_Estoque" EntityType="Self.Mov_Estoque" />
+    <EntitySet Name="Mov_Estoque_Detalhes" EntityType="Self.Mov_Estoque_Detalhes" />
+    <EntitySet Name="Tab_Cadastro" EntityType="Self.Tab_Cadastro" />
+    <EntitySet Name="Tab_Estado" EntityType="Self.Tab_Estado" />
+    <EntitySet Name="Tab_Estoque" EntityType="Self.Tab_Estoque" />
+    <AssociationSet Name="FK_Mov_Estoque_Detalhes_Mov_Estoque" Association="Self.FK_Mov_Estoque_Detalhes_Mov_Estoque">
+      <End Role="Mov_Estoque" EntitySet="Mov_Estoque" />
+      <End Role="Mov_Estoque_Detalhes" EntitySet="Mov_Estoque_Detalhes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mov_Estoque_Tab_Cadastro" Association="Self.FK_Mov_Estoque_Tab_Cadastro">
+      <End Role="Tab_Cadastro" EntitySet="Tab_Cadastro" />
+      <End Role="Mov_Estoque" EntitySet="Mov_Estoque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mov_Estoque_Tab_Estado" Association="Self.FK_Mov_Estoque_Tab_Estado">
+      <End Role="Tab_Estado" EntitySet="Tab_Estado" />
+      <End Role="Mov_Estoque" EntitySet="Mov_Estoque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mov_Estoque_Detalhes_Tab_Estoque" Association="Self.FK_Mov_Estoque_Detalhes_Tab_Estoque">
+      <End Role="Tab_Estoque" EntitySet="Tab_Estoque" />
+      <End Role="Mov_Estoque_Detalhes" EntitySet="Mov_Estoque_Detalhes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tab_Estoque_Tab_Cadastro" Association="Self.FK_Tab_Estoque_Tab_Cadastro">
+      <End Role="Tab_Cadastro" EntitySet="Tab_Cadastro" />
+      <End Role="Tab_Estoque" EntitySet="Tab_Estoque" />
+    </AssociationSet>
+    <AssociationSet Name="Reference34" Association="Self.Reference34">
+      <End Role="Tab_Estado" EntitySet="Tab_Estado" />
+      <End Role="Tab_Cadastro" EntitySet="Tab_Cadastro" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

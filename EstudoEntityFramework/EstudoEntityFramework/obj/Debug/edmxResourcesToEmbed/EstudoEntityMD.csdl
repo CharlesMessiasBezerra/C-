@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDEstudoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bairro">
+    <Key>
+      <PropertyRef Name="pk_intCod" />
+    </Key>
+    <Property Name="pk_intCod" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="strNOME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="strcep" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.CHAVE_ESTRANGEIRA_BAIRRO" FromRole="Bairro" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="pk_intCod" />
+    </Key>
+    <Property Name="pk_intCod" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_intBairro" Type="Int32" />
+    <Property Name="strNOME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="intIdade" Type="Int32" />
+    <Property Name="strSexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Bairro" Relationship="Self.CHAVE_ESTRANGEIRA_BAIRRO" FromRole="Cliente" ToRole="Bairro" />
+  </EntityType>
+  <Association Name="CHAVE_ESTRANGEIRA_BAIRRO">
+    <End Role="Bairro" Type="Self.Bairro" Multiplicity="0..1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bairro">
+        <PropertyRef Name="pk_intCod" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="fk_intBairro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BDEstudoConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bairro" EntityType="Self.Bairro" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <AssociationSet Name="CHAVE_ESTRANGEIRA_BAIRRO" Association="Self.CHAVE_ESTRANGEIRA_BAIRRO">
+      <End Role="Bairro" EntitySet="Bairro" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

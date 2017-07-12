@@ -1,0 +1,24 @@
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\bin\Debug\Interface.exe.config
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\bin\Debug\Interface.exe
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\bin\Debug\Interface.pdb
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\bin\Debug\EntityFramework.dll
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\bin\Debug\Infra.data.dll
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\bin\Debug\Infra.data.pdb
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\bin\Debug\EntityFramework.xml
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\obj\Debug\Interface.exe
+C:\Users\Charles\documents\visual studio 2013\Projects\EFCodFirst\Interface\obj\Debug\Interface.pdb
+C:\DVP\CSharp\EFCodFirst\Interface\bin\Debug\Interface.exe.config
+C:\DVP\CSharp\EFCodFirst\Interface\obj\Debug\Interface.exe
+C:\DVP\CSharp\EFCodFirst\Interface\obj\Debug\Interface.pdb
+C:\DVP\CSharp\EFCodFirst\Interface\bin\Debug\Interface.exe
+C:\DVP\CSharp\EFCodFirst\Interface\bin\Debug\Interface.pdb
+C:\DVP\CSharp\EFCodFirst\Interface\bin\Debug\EntityFramework.dll
+C:\DVP\CSharp\EFCodFirst\Interface\bin\Debug\EntityFramework.SqlServer.dll
+C:\DVP\CSharp\EFCodFirst\Interface\bin\Debug\Infra.data.dll
+C:\DVP\CSharp\EFCodFirst\Interface\bin\Debug\Infra.data.pdb
+C:\DVP\CSharp\EFCodFirst\Interface\bin\Debug\EntityFramework.xml
+C:\DVP\CSharp\EFCodFirst\Interface\bin\Debug\EntityFramework.SqlServer.xml
+C:\DVP\CSharp\EFCodFirst\Interface\obj\Debug\Interface.csprojResolveAssemblyReference.cache

@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OuroBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Mov_Estoque">
+    <Key>
+      <PropertyRef Name="IdMovimento" />
+    </Key>
+    <Property Name="IdMovimento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdParalelo" Type="int" />
+    <Property Name="Estoque" Type="int" />
+    <Property Name="IdOS" Type="int" />
+    <Property Name="IdEtapa" Type="int" />
+    <Property Name="Descrição" Type="nvarchar" MaxLength="35" />
+    <Property Name="ÉEntrada" Type="bit" Nullable="false" />
+    <Property Name="IdCadastro" Type="nvarchar" MaxLength="8" />
+    <Property Name="NúmeroDocumento" Type="int" />
+    <Property Name="NúmeroPedido" Type="int" />
+    <Property Name="IdUsuário" Type="nvarchar" MaxLength="20" />
+    <Property Name="TelaOrigem" Type="nvarchar" MaxLength="3" />
+    <Property Name="IdTipoMovimento" Type="int" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="NúmeroParcelas" Type="smallint" />
+    <Property Name="PrazoMédioParcelas" Type="smallint" />
+    <Property Name="TotalServiços" Type="money" Nullable="false" />
+    <Property Name="TipoFaturamento" Type="int" />
+    <Property Name="ClassificaçãoMovimento" Type="smallint" />
+    <Property Name="TotalIPI" Type="money" Nullable="false" />
+    <Property Name="TotalICM" Type="money" Nullable="false" />
+    <Property Name="baseCalculoICM" Type="money" Nullable="false" />
+    <Property Name="CódigoNaturezaOperação" Type="nvarchar" MaxLength="4" />
+    <Property Name="CódigoConta" Type="nvarchar" MaxLength="5" />
+    <Property Name="CódigoCentroAcumulação" Type="nvarchar" MaxLength="3" />
+    <Property Name="EspécieDocumento" Type="nvarchar" MaxLength="3" />
+    <Property Name="SérieDocumento" Type="nvarchar" MaxLength="3" />
+    <Property Name="ICMSobreValorContábil" Type="bit" Nullable="false" />
+    <Property Name="TemICM" Type="bit" Nullable="false" />
+    <Property Name="TemIPI" Type="bit" Nullable="false" />
+    <Property Name="TemISS" Type="bit" Nullable="false" />
+    <Property Name="PercentualICM" Type="money" Nullable="false" />
+    <Property Name="PercentualISS" Type="money" Nullable="false" />
+    <Property Name="DescontoValor" Type="money" Nullable="false" />
+    <Property Name="ValorOutrasDespesas" Type="money" Nullable="false" />
+    <Property Name="TotalValorItens" Type="money" Nullable="false" />
+    <Property Name="TransportadoraVencimento" Type="datetime" />
+    <Property Name="TransportadoraCódigo" Type="nvarchar" MaxLength="8" />
+    <Property Name="TotalFrete" Type="money" Nullable="false" />
+    <Property Name="FreteExterno" Type="bit" Nullable="false" />
+    <Property Name="IdFuncionário" Type="nvarchar" MaxLength="3" />
+    <Property Name="DataEmissão" Type="datetime" />
+    <Property Name="TotalDocumento" Type="money" Nullable="false" />
+    <Property Name="IdCancelamento" Type="int" />
+    <Property Name="TotalPeso" Type="money" Nullable="false" />
+    <Property Name="PercentualComissão" Type="money" Nullable="false" />
+    <Property Name="TotalComissão" Type="money" Nullable="false" />
+    <Property Name="IdPedidoUtilizado" Type="int" />
+    <Property Name="DataEntrega" Type="datetime" />
+    <Property Name="TotalValorCustoItens" Type="money" />
+    <Property Name="DetalheEntrega" Type="text" />
+    <Property Name="IdGrupoMov" Type="int" />
+    <Property Name="Ped_Valor_ServiçoFat" Type="money" />
+    <Property Name="Ped_Valor_ItensFat" Type="money" />
+    <Property Name="ParcelamentoAutomático" Type="bit" Nullable="false" />
+    <Property Name="Ped_Pendente_Liberado" Type="bit" Nullable="false" />
+    <Property Name="OSFoiAberta" Type="bit" Nullable="false" />
+    <Property Name="Ped_Percentual_Faturado" Type="money" />
+    <Property Name="Devolução" Type="bit" Nullable="false" />
+    <Property Name="IdMovOrigem" Type="int" />
+    <Property Name="IdOrçamentoUtilizado" Type="int" />
+    <Property Name="IdEntregador" Type="nvarchar" MaxLength="3" />
+    <Property Name="Rentabilidade" Type="money" />
+    <Property Name="ErroDigitação" Type="bit" Nullable="false" />
+    <Property Name="Validade" Type="datetime" />
+    <Property Name="PedidoLiberadoFaturamento" Type="bit" Nullable="false" />
+    <Property Name="LiberaçãoUsuário" Type="nvarchar" MaxLength="20" />
+    <Property Name="PedidoBloqCrédito" Type="bit" Nullable="false" />
+    <Property Name="Volume" Type="money" />
+    <Property Name="DescontoComissão" Type="money" />
+    <Property Name="DataMovimento" Type="datetime" Nullable="false" />
+    <Property Name="Impresso" Type="bit" Nullable="false" />
+    <Property Name="PrazoEntrega" Type="nvarchar" MaxLength="100" />
+    <Property Name="OrcamentoOffLine" Type="bit" Nullable="false" />
+    <Property Name="DataSaida" Type="datetime" />
+    <Property Name="ImprimiuEtiqueta" Type="bit" Nullable="false" />
+    <Property Name="Internet" Type="bit" Nullable="false" />
+    <Property Name="CodinomeAtividade" Type="nvarchar" MaxLength="8" />
+    <Property Name="TotalICMSubstTrib" Type="money" Nullable="false" />
+    <Property Name="BaseCalculoICMSubstTrib" Type="money" Nullable="false" />
+    <Property Name="TransferenciaConferida" Type="bit" Nullable="false" />
+    <Property Name="IdUsuarioCancelamento" Type="nvarchar" MaxLength="20" />
+    <Property Name="DescontoFinanceiro" Type="money" Nullable="false" />
+    <Property Name="IdUsuarioDesconto" Type="int" Nullable="false" />
+    <Property Name="ValorTroca" Type="money" Nullable="false" />
+    <Property Name="ERegistroEspecial" Type="bit" Nullable="false" />
+    <Property Name="DevolucaoAprovada" Type="bit" Nullable="false" />
+    <Property Name="ColetarDevolucao" Type="bit" Nullable="false" />
+    <Property Name="EmitirCartaCorrecaoDevolucao" Type="bit" Nullable="false" />
+    <Property Name="ContatoDevolucao" Type="varchar" MaxLength="20" />
+    <Property Name="EdicaoLiberada" Type="bit" Nullable="false" />
+    <Property Name="ValorCreditoDebito" Type="money" Nullable="false" />
+    <Property Name="IdEmissaoBoleto" Type="int" Nullable="false" />
+    <Property Name="BaseCalculoEsp18" Type="money" Nullable="false" />
+    <Property Name="BaseCalculoEsp12" Type="money" Nullable="false" />
+    <Property Name="BaseCalculoEsp18ST" Type="money" Nullable="false" />
+    <Property Name="BaseCalculoEsp12ST" Type="money" Nullable="false" />
+    <Property Name="ValorICMPagoSubst" Type="money" Nullable="false" />
+    <Property Name="UtilizaRegEspSubstTrib" Type="bit" Nullable="false" />
+    <Property Name="DataLiberacaoPagtoComissaoDev" Type="datetime" />
+    <Property Name="ConfereNF" Type="bit" />
+    <Property Name="ValorJuros" Type="money" Nullable="false" />
+    <Property Name="ConcluidoFinanceiroDevolucao" Type="bit" Nullable="false" />
+    <Property Name="IdMensagemTroca" Type="int" />
+    <Property Name="NumeroCupom" Type="varchar" MaxLength="50" />
+    <Property Name="TempoPrevisto" Type="int" />
+    <Property Name="LocalFaturamento" Type="varchar" MaxLength="50" />
+    <Property Name="UtilizaCustoComercial" Type="bit" Nullable="false" />
+    <Property Name="TotalCompraDig" Type="money" Nullable="false" />
+    <Property Name="NaturezaSubstTrib" Type="varchar" MaxLength="4" />
+    <Property Name="StatusFinanceiroDevolucao" Type="int" />
+    <Property Name="IdMovimentoDescDevolucao" Type="int" />
+    <Property Name="IdFuncEmbalagem" Type="nvarchar" MaxLength="3" />
+    <Property Name="PercImpostoIVA" Type="money" Nullable="false" />
+    <Property Name="TotalImpostoIVA" Type="money" Nullable="false" />
+    <Property Name="Caixa" Type="varchar" MaxLength="15" />
+    <Property Name="ValorEntregue" Type="money" Nullable="false" />
+    <Property Name="IdUsuarioReImpressao" Type="int" />
+    <Property Name="MotivoReImpressao" Type="varchar" MaxLength="200" />
+    <Property Name="RentabilidadeMarkup" Type="money" Nullable="false" />
+    <Property Name="RentabilidadeCustoMedio" Type="money" Nullable="false" />
+    <Property Name="NroConfEntrada" Type="int" />
+    <Property Name="IdRota" Type="int" />
+    <Property Name="ArquivoDePedidoNoFornecedorGerado" Type="bit" Nullable="false" />
+    <Property Name="PercentualComissaoDigitadoPedSai" Type="money" Nullable="false" />
+    <Property Name="TotalValorCustoMedio" Type="money" Nullable="false" />
+    <Property Name="BaseCalculoEsp25" Type="money" Nullable="false" />
+    <Property Name="BaseCalculoEsp25ST" Type="money" Nullable="false" />
+    <Property Name="IdUsuLibMovPerdido" Type="int" />
+    <Property Name="cur_per_brinde" Type="money" Nullable="false" />
+    <Property Name="bit_modelo" Type="bit" Nullable="false" />
+    <Property Name="int_nro_termo" Type="int" Nullable="false" />
+    <Property Name="fk_int_id_statuspedido" Type="int" />
+    <Property Name="fk_int_tipo_movimento_faturar" Type="int" />
+    <Property Name="str_solicitante" Type="varchar" MaxLength="100" />
+    <Property Name="dte_conclusao_movimento" Type="datetime" />
+    <Property Name="cur_vlr_outro_desconto" Type="money" />
+    <Property Name="cur_vlr_outro_acrescimo" Type="money" />
+    <Property Name="BaseCalculoEsp7" Type="money" Nullable="false" />
+    <Property Name="BaseCalculoEsp7ST" Type="money" Nullable="false" />
+    <Property Name="BaseCalculoEsp19" Type="money" Nullable="false" />
+    <Property Name="BaseCalculoEsp19ST" Type="money" Nullable="false" />
+    <Property Name="cur_VlrTotalItensPromocao" Type="money" />
+    <Property Name="int_PDCConfParcialmente" Type="smallint" Nullable="false" />
+    <Property Name="int_IdMovimentoConsignacao" Type="int" />
+    <Property Name="bit_MovimentoAgrupado" Type="bit" Nullable="false" />
+    <Property Name="cur_FatMinima" Type="money" Nullable="false" />
+    <Property Name="cur_vlr_TransporteFrete" Type="money" Nullable="false" />
+    <Property Name="str_obs_2" Type="varchar" MaxLength="4000" />
+    <Property Name="cur_vlr_TotalISS" Type="money" Nullable="false" />
+    <Property Name="dte_Transporte" Type="datetime" />
+    <Property Name="fk_int_UsuarioEdicao" Type="int" />
+    <Property Name="str_processo" Type="varchar" MaxLength="50" />
+    <Property Name="str_prazoentrega" Type="varchar" MaxLength="20" />
+    <Property Name="str_vigenciacontrato" Type="varchar" MaxLength="20" />
+    <Property Name="bit_Ratear" Type="bit" Nullable="false" />
+    <Property Name="int_TipoLicitacao" Type="tinyint" />
+    <Property Name="fk_int_IdMovimentoOffLine" Type="int" />
+    <Property Name="int_NroDocumentoOffLine" Type="int" />
+    <Property Name="bit_ExportaOffLine" Type="bit" />
+    <Property Name="bit_ImportaOffLine" Type="bit" />
+    <Property Name="cur_desc_CredDevolucao" Type="money" />
+    <Property Name="int_SolicitouPedido" Type="int" />
+    <Property Name="str_ContatoCliente" Type="varchar" MaxLength="200" />
+    <Property Name="dte_Despacho" Type="datetime" />
+    <Property Name="bit_ConferenciaDespacho" Type="bit" Nullable="false" />
+    <Property Name="bit_AtualizaCustoMedio" Type="bit" Nullable="false" />
+    <Property Name="AberturaLicitacao" Type="varchar" MaxLength="30" />
+    <Property Name="AgenciaLicitacao" Type="varchar" MaxLength="15" />
+    <Property Name="AutorizaçãoPedido" Type="varchar" MaxLength="40" />
+    <Property Name="BancoLicitacao" Type="varchar" MaxLength="15" />
+    <Property Name="Chassi" Type="varchar" MaxLength="20" />
+    <Property Name="ContaCorrenteLicitacao" Type="varchar" MaxLength="15" />
+    <Property Name="DescriçãoDescontoComissão" Type="varchar" MaxLength="20" />
+    <Property Name="DescricaoFinanceiroDevolucao" Type="varchar" MaxLength="4000" />
+    <Property Name="DescriçãoOutrasDespesas" Type="varchar" MaxLength="15" />
+    <Property Name="EncerramentoLicitacao" Type="varchar" MaxLength="30" />
+    <Property Name="MensagemDocumento" Type="varchar" MaxLength="4000" />
+    <Property Name="MotivoCancelamento" Type="varchar" MaxLength="200" />
+    <Property Name="NroLicitacao" Type="varchar" MaxLength="15" />
+    <Property Name="str_deslayout" Type="varchar" MaxLength="8" />
+    <Property Name="str_LocalGarantia" Type="varchar" MaxLength="200" />
+    <Property Name="str_obs_Despacho" Type="varchar" MaxLength="500" />
+    <Property Name="str_PathDocumento" Type="varchar" MaxLength="200" />
+    <Property Name="TransportadoraDocumento" Type="varchar" MaxLength="10" />
+    <Property Name="UsuarioLiberacaoDigPercentualComissao" Type="varchar" MaxLength="20" />
+    <Property Name="UsuarioRegistroEspecial" Type="varchar" MaxLength="20" />
+    <Property Name="int_TipoReceituarioMed" Type="tinyint" />
+    <Property Name="dte_PrescricaoMed" Type="datetime" />
+    <Property Name="str_nm_PrescritorMed" Type="varchar" MaxLength="100" />
+    <Property Name="str_nro_RegistroProfissional" Type="varchar" MaxLength="30" />
+    <Property Name="str_ConselhoProfissional" Type="nvarchar" MaxLength="5" />
+    <Property Name="fk_str_EstadoConselho" Type="nvarchar" MaxLength="2" />
+    <Property Name="str_nro_NoticacaoMed" Type="nvarchar" MaxLength="10" />
+    <Property Name="bit_GNRE" Type="bit" Nullable="false" />
+    <Property Name="int_IdUsuarioAlterouVendedor" Type="int" />
+    <Property Name="bit_ImprimiuRelatorioRomaneio" Type="bit" />
+    <Property Name="bit_CobrarSubstTributariaCliente" Type="bit" />
+    <Property Name="dbl_PercRentabilidadeMinimaOffLine" Type="float" />
+    <Property Name="int_UsuarioDesbloqueouRentabildadeMinimaIntegrator" Type="int" />
+    <Property Name="fk_int_IdEmpresaOffLine" Type="int" />
+    <Property Name="Mov_Estoque" Type="int" />
+    <Property Name="bit_ExportaMovimentoSupervisor" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mov_Estoque_Detalhes">
+    <Key>
+      <PropertyRef Name="IdDetalhe" />
+    </Key>
+    <Property Name="IdMovimento" Type="int" />
+    <Property Name="Quantidade" Type="money" Nullable="false" />
+    <Property Name="SaldoAnterior" Type="money" Nullable="false" />
+    <Property Name="ValorUnitário" Type="float" Nullable="false" />
+    <Property Name="PercIPI" Type="money" Nullable="false" />
+    <Property Name="PercICM" Type="money" Nullable="false" />
+    <Property Name="IdDetalhe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ValorCustoUnitário" Type="money" Nullable="false" />
+    <Property Name="ValorCustoMédioUnitário" Type="money" Nullable="false" />
+    <Property Name="DescriçãoDetalhada" Type="text" />
+    <Property Name="PesoUnitário" Type="money" Nullable="false" />
+    <Property Name="PercBaseCálculoICM" Type="money" Nullable="false" />
+    <Property Name="PercDesconto" Type="float" Nullable="false" />
+    <Property Name="IdDetalhePedido" Type="int" />
+    <Property Name="IdItem" Type="nvarchar" MaxLength="7" />
+    <Property Name="PendenteLiberado" Type="bit" Nullable="false" />
+    <Property Name="RentabilidadeItem" Type="float" />
+    <Property Name="QuantidadeUsada" Type="money" />
+    <Property Name="ValorUnitárioUsado" Type="float" />
+    <Property Name="Largura" Type="money" />
+    <Property Name="Comprimento" Type="money" />
+    <Property Name="Quantidade2" Type="money" />
+    <Property Name="PercComissãoProduto" Type="money" />
+    <Property Name="BaseComissão" Type="money" />
+    <Property Name="Lote" Type="nvarchar" MaxLength="20" />
+    <Property Name="Ordem" Type="int" />
+    <Property Name="ValorDesconto" Type="float" Nullable="false" />
+    <Property Name="QuantidadeDevolvida" Type="money" Nullable="false" />
+    <Property Name="CustoMedioContabil" Type="money" Nullable="false" />
+    <Property Name="IdFuncionario" Type="nvarchar" MaxLength="3" />
+    <Property Name="CalculaComissao" Type="bit" Nullable="false" />
+    <Property Name="PrecoFabrica" Type="money" Nullable="false" />
+    <Property Name="PercRepasse" Type="money" Nullable="false" />
+    <Property Name="PrMaxConsumidor" Type="money" Nullable="false" />
+    <Property Name="SaldoFAnterior" Type="money" Nullable="false" />
+    <Property Name="SaldoBRAnterior" Type="money" Nullable="false" />
+    <Property Name="ValorUnitRecuperado" Type="money" Nullable="false" />
+    <Property Name="CPF" Type="money" Nullable="false" />
+    <Property Name="ValorUnitarioReal" Type="float" Nullable="false" />
+    <Property Name="ValorRepasse" Type="money" Nullable="false" />
+    <Property Name="QuantidadeDigitada" Type="money" Nullable="false" />
+    <Property Name="ValorPresente" Type="money" Nullable="false" />
+    <Property Name="ValorInflacao" Type="money" Nullable="false" />
+    <Property Name="Data" Type="datetime" />
+    <Property Name="RentabilidadeMarkup" Type="float" Nullable="false" />
+    <Property Name="RentabilidadeCustoMedio" Type="money" Nullable="false" />
+    <Property Name="bit_item_promocional" Type="bit" Nullable="false" />
+    <Property Name="bit_item_brinde_subst" Type="bit" Nullable="false" />
+    <Property Name="bit_item_brinde" Type="bit" Nullable="false" />
+    <Property Name="str_DescricaoDetalhadaLote" Type="varchar" MaxLength="2000" />
+    <Property Name="PercICMSSubstTributaria" Type="money" Nullable="false" />
+    <Property Name="int_Ordem_Item" Type="int" />
+    <Property Name="fk_int_IdMovimento" Type="int" />
+    <Property Name="bit_AtualizarCusto" Type="bit" Nullable="false" />
+    <Property Name="bit_OrigemLotesSelecao" Type="bit" Nullable="false" />
+    <Property Name="fk_int_Programado" Type="int" />
+    <Property Name="str_IdItemNF" Type="varchar" MaxLength="8" />
+    <Property Name="cur_custocontabil" Type="money" Nullable="false" />
+    <Property Name="cur_custocontabilmedio" Type="money" Nullable="false" />
+    <Property Name="cur_vlr_UltimaCompra" Type="money" Nullable="false" />
+    <Property Name="bit_ItemRefrigerado" Type="bit" Nullable="false" />
+    <Property Name="dbl_perc_ReducaoSubstTribPMC" Type="float" Nullable="false" />
+    <Property Name="cur_qtd_Falta" Type="money" />
+    <Property Name="cur_CustoNegociado" Type="money" />
+    <Property Name="cur_vlr_UnitarioMinimo" Type="float" />
+    <Property Name="cur_RentMinimo" Type="float" />
+    <Property Name="cur_CustoUnitItemSemComissao" Type="money" />
+    <Property Name="bit_ItemPerdido" Type="bit" Nullable="false" />
+    <Property Name="cur_ValorSubstituicaoTributaria" Type="money" />
+    <Property Name="cur_BaseSubstituicaoTributaria" Type="money" />
+    <Property Name="cur_RentMinimaItem" Type="float" />
+    <Property Name="UnidadeUsada" Type="varchar" MaxLength="3" />
+    <Property Name="PedidoCompra" Type="float" Nullable="false" />
+    <Property Name="QuantidadeBloqueada" Type="float" Nullable="false" />
+    <Property Name="QuantidadeFaturada" Type="float" Nullable="false" />
+    <Property Name="QuantidadeConferidaPedVenda" Type="float" Nullable="false" />
+    <Property Name="fk_int_IdTemp" Type="int" />
+    <Property Name="dbl_ValorUnitarioUsadoCasaDecimal" Type="float" />
+  </EntityType>
+  <EntityType Name="Tab_Cadastro">
+    <Key>
+      <PropertyRef Name="Codinome" />
+    </Key>
+    <Property Name="Codinome" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="DataCadastro" Type="datetime" />
+    <Property Name="NomeFantasia" Type="nvarchar" MaxLength="50" />
+    <Property Name="Jurídica" Type="bit" Nullable="false" />
+    <Property Name="AtividadeEmpresa" Type="nvarchar" MaxLength="25" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="2" />
+    <Property Name="País" Type="nvarchar" MaxLength="20" />
+    <Property Name="CEP" Type="nvarchar" MaxLength="9" />
+    <Property Name="Fone1" Type="nvarchar" MaxLength="15" />
+    <Property Name="Fone2" Type="nvarchar" MaxLength="15" />
+    <Property Name="FAX" Type="nvarchar" MaxLength="15" />
+    <Property Name="DataAniversário" Type="datetime" />
+    <Property Name="CGC" Type="nvarchar" MaxLength="18" />
+    <Property Name="InscEstadual" Type="nvarchar" MaxLength="18" />
+    <Property Name="Vendedor" Type="nvarchar" MaxLength="15" />
+    <Property Name="Classificação" Type="nvarchar" MaxLength="1" />
+    <Property Name="DataÚltima" Type="datetime" />
+    <Property Name="Observação1" Type="text" />
+    <Property Name="AFazer" Type="text" />
+    <Property Name="Seleção" Type="bit" Nullable="false" />
+    <Property Name="NroOLE" Type="money" />
+    <Property Name="ÚltimaCompra" Type="datetime" />
+    <Property Name="ClienteFornecedor" Type="nvarchar" MaxLength="1" />
+    <Property Name="Celular" Type="nvarchar" MaxLength="15" />
+    <Property Name="IdTipoFaturamento" Type="int" />
+    <Property Name="Doc" Type="image" />
+    <Property Name="AreaInteresse2" Type="nvarchar" MaxLength="25" />
+    <Property Name="ÉIsentoInscriçãoEstadual" Type="bit" Nullable="false" />
+    <Property Name="IdGrupoCad" Type="nvarchar" MaxLength="3" />
+    <Property Name="IdSubCadGrupo" Type="nvarchar" MaxLength="3" />
+    <Property Name="IdUsuário" Type="nvarchar" MaxLength="20" />
+    <Property Name="CréditoAVencer" Type="money" />
+    <Property Name="CréditoVencidas" Type="money" />
+    <Property Name="CréditoPedido" Type="money" />
+    <Property Name="RentabilidadeMínima" Type="money" />
+    <Property Name="Sexo" Type="nvarchar" MaxLength="1" />
+    <Property Name="ÉConsumidorFinal" Type="bit" Nullable="false" />
+    <Property Name="IdCidade" Type="int" />
+    <Property Name="IdFuncionário" Type="nvarchar" MaxLength="3" />
+    <Property Name="CobrarFrete" Type="bit" Nullable="false" />
+    <Property Name="ÁreaInteresse" Type="nvarchar" MaxLength="25" />
+    <Property Name="Status" Type="int" />
+    <Property Name="NãoExibeWeb" Type="bit" Nullable="false" />
+    <Property Name="RecebeComissãoEspecial" Type="bit" Nullable="false" />
+    <Property Name="Serie" Type="nvarchar" MaxLength="3" />
+    <Property Name="Especie" Type="nvarchar" MaxLength="3" />
+    <Property Name="IdTitular" Type="nvarchar" MaxLength="8" />
+    <Property Name="CurvaABCRent" Type="nvarchar" MaxLength="1" />
+    <Property Name="CurvaABCDias" Type="nvarchar" MaxLength="1" />
+    <Property Name="CurvaABCVendas" Type="nvarchar" MaxLength="1" />
+    <Property Name="PartABCVendas" Type="money" />
+    <Property Name="CompraProdutoControlado" Type="bit" Nullable="false" />
+    <Property Name="IcmEspecificoManaus" Type="bit" Nullable="false" />
+    <Property Name="Complemento" Type="nvarchar" MaxLength="40" />
+    <Property Name="NaoIncluiSugestaoCompras" Type="bit" Nullable="false" />
+    <Property Name="Agencia" Type="nvarchar" MaxLength="5" />
+    <Property Name="VerificadorAgencia" Type="nvarchar" MaxLength="1" />
+    <Property Name="NumeroConta" Type="nvarchar" MaxLength="12" />
+    <Property Name="DigitoConta" Type="nvarchar" MaxLength="1" />
+    <Property Name="DigitoAgConta" Type="nvarchar" MaxLength="1" />
+    <Property Name="CodigoBanco" Type="nvarchar" MaxLength="3" />
+    <Property Name="TipoConta" Type="nvarchar" MaxLength="2" />
+    <Property Name="CodTransportadora" Type="nvarchar" MaxLength="8" />
+    <Property Name="OrgaoPublico" Type="bit" Nullable="false" />
+    <Property Name="CRM" Type="nvarchar" MaxLength="20" />
+    <Property Name="NaoCompraGrupo" Type="nvarchar" MaxLength="3" />
+    <Property Name="PercDescontoCliente" Type="money" />
+    <Property Name="EEstabelecimentoFilial" Type="bit" Nullable="false" />
+    <Property Name="StatusFinanceiro" Type="nvarchar" MaxLength="25" />
+    <Property Name="CaixaDefaultBoleto" Type="nvarchar" MaxLength="15" />
+    <Property Name="PrazoProtesto" Type="int" Nullable="false" />
+    <Property Name="StatusConsulta" Type="int" />
+    <Property Name="DataExpedicao" Type="datetime" />
+    <Property Name="NaoVerificaCreditos" Type="bit" Nullable="false" />
+    <Property Name="CodigoAntigo" Type="varchar" MaxLength="10" />
+    <Property Name="NroEndereco" Type="int" />
+    <Property Name="SPCEfetiv" Type="datetime" />
+    <Property Name="SPCReabilit" Type="datetime" />
+    <Property Name="SomaFreteNaBaseIcms" Type="bit" Nullable="false" />
+    <Property Name="SomaOutrasDespNaBaseIcms" Type="bit" Nullable="false" />
+    <Property Name="SomaFreteNaBaseIpi" Type="bit" Nullable="false" />
+    <Property Name="SomaOutrasDespNaBaseIpi" Type="bit" Nullable="false" />
+    <Property Name="CobrarFreteTerceiros" Type="bit" Nullable="false" />
+    <Property Name="NaoCobrarTarifaCobranca" Type="bit" Nullable="false" />
+    <Property Name="Site" Type="varchar" MaxLength="50" />
+    <Property Name="Ramal1" Type="varchar" MaxLength="10" />
+    <Property Name="Ramal2" Type="varchar" MaxLength="10" />
+    <Property Name="GeraPedidoNoFornecedor" Type="bit" Nullable="false" />
+    <Property Name="PercentualComissao" Type="money" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomeEmpresa" Type="nvarchar" MaxLength="100" />
+    <Property Name="Fidelidade" Type="varchar" MaxLength="20" />
+    <Property Name="str_cargo_contato" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cur_per_brinde" Type="money" Nullable="false" />
+    <Property Name="bit_utiliza_subst_trib" Type="bit" Nullable="false" />
+    <Property Name="bit_bloqueiacompra" Type="bit" Nullable="false" />
+    <Property Name="int_tipomovimento_pri" Type="int" />
+    <Property Name="cur_per_tipomovimento_pri" Type="money" />
+    <Property Name="int_tipomovimento_seg" Type="int" />
+    <Property Name="bit_bloqueiacomprasemcredito" Type="bit" Nullable="false" />
+    <Property Name="cur_perc_frete_padrao" Type="money" />
+    <Property Name="str_num_alvara" Type="varchar" MaxLength="50" />
+    <Property Name="dte_vencimento_alvara" Type="datetime" />
+    <Property Name="DataUltimaAtualizacao" Type="datetime" />
+    <Property Name="SenhaWeb" Type="varchar" MaxLength="50" />
+    <Property Name="fk_int_indicacao" Type="int" />
+    <Property Name="int_ClassificacaoOrgaoPublico" Type="int" />
+    <Property Name="int_TempoGarantiaProduto" Type="int" />
+    <Property Name="dbl_PercFreteRentMix" Type="float" />
+    <Property Name="Endereço" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bairro" Type="nvarchar" MaxLength="40" />
+    <Property Name="Contato" Type="nvarchar" MaxLength="70" />
+    <Property Name="dbl_PercAbaterReducaoST" Type="float" Nullable="false" />
+    <Property Name="bit_BloqMvtDocumentos" Type="bit" Nullable="false" />
+    <Property Name="dbl_perc_DescFretePesado" Type="float" Nullable="false" />
+    <Property Name="dbl_perc_DescRefrigerado" Type="float" Nullable="false" />
+    <Property Name="dbl_perc_DescNormal" Type="float" Nullable="false" />
+    <Property Name="cur_FatMinima" Type="money" Nullable="false" />
+    <Property Name="dte_VencimentoLimiteCredito" Type="datetime" />
+    <Property Name="dte_CreditoAVencer" Type="datetime" />
+    <Property Name="str_Farmaceutico" Type="varchar" MaxLength="50" />
+    <Property Name="dte_NaoExibiAniversario" Type="datetime" />
+    <Property Name="bit_Exterior" Type="bit" Nullable="false" />
+    <Property Name="fk_int_OrgaoExpedidor" Type="int" />
+    <Property Name="str_MotivoAlteracao" Type="varchar" MaxLength="200" />
+    <Property Name="bit_NaoBloqCheqPre" Type="bit" Nullable="false" />
+    <Property Name="fk_int_SituacaoSerasa" Type="int" />
+    <Property Name="dte_UltimaConsulta" Type="datetime" />
+    <Property Name="bit_CobrarSubstTributariaCliente" Type="bit" Nullable="false" />
+    <Property Name="dbl_PercRentabilidadeMinimaOffLine" Type="float" />
+    <Property Name="bit_ImprimeDuplicata" Type="bit" Nullable="false" />
+    <Property Name="dte_Fundacao" Type="datetime" />
+    <Property Name="int_TipoSubstTributaria" Type="tinyint" Nullable="false" />
+    <Property Name="bit_NaoAplicaDescBaseCalculoSubstTrib" Type="bit" Nullable="false" />
+    <Property Name="bit_IndustriaFabricante" Type="bit" Nullable="false" />
+    <Property Name="cur_CurvaABCVendasRentPonderada" Type="money" />
+    <Property Name="cur_CurvaABCVendasPartInd" Type="money" />
+    <Property Name="cur_CurvaABCVendasPartAcum" Type="money" />
+    <Property Name="cur_CurvaABCRentValor" Type="money" />
+    <Property Name="cur_CurvaABCRentPartInd" Type="money" />
+    <Property Name="cur_CurvaABCRentPartAcum" Type="money" />
+    <Property Name="cur_CurvaABCDiasValorAtraso" Type="money" />
+    <Property Name="cur_CurvaABCDiasPartInd" Type="money" />
+    <Property Name="cur_CurvaABCDiasPartAcum" Type="money" />
+    <Property Name="int_IdUsuarioTMK" Type="int" />
+    <Property Name="pk_int_Cadastro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="str_IdContaDefault" Type="nvarchar" MaxLength="5" />
+    <Property Name="str_IdCentroAcumulacaoDefault" Type="nvarchar" MaxLength="3" />
+    <Property Name="str_EmailNFe" Type="varchar" MaxLength="100" />
+    <Property Name="bit_Medico" Type="bit" Nullable="false" />
+    <Property Name="str_ConselhoProfissional" Type="varchar" MaxLength="5" />
+    <Property Name="str_EstadoConselho" Type="varchar" MaxLength="2" />
+    <Property Name="cur_PercLimite" Type="money" />
+    <Property Name="bit_MonitoradoSERASA" Type="bit" Nullable="false" />
+    <Property Name="str_Celular" Type="varchar" MaxLength="30" />
+    <Property Name="int_DiasChecagemCredito" Type="int" />
+    <Property Name="bit_NaoCalcularSTNaCompra" Type="bit" Nullable="false" />
+    <Property Name="cur_PercentualReducaoBaseCalculoICMSSTVenda" Type="float" />
+    <Property Name="bit_ObrigarPercAcrecimosItens" Type="bit" Nullable="false" />
+    <Property Name="bit_SimplesFederal" Type="bit" Nullable="false" />
+    <Property Name="ContaContabilCadastro" Type="varchar" MaxLength="30" />
+    <Property Name="int_ContaContabilCadastroEntrada" Type="varchar" MaxLength="30" />
+    <Property Name="fk_int_Classificacao" Type="int" />
+    <Property Name="fk_int_GrupoDesconto" Type="int" />
+    <Property Name="fk_int_Pais" Type="int" />
+    <Property Name="int_TipoTransporteDefault" Type="int" />
+    <Property Name="str_CaixaPostal_PE_TIVIT" Type="varchar" MaxLength="50" />
+    <Property Name="int_TipoSTCobravelSaida" Type="int" />
+    <Property Name="cur_PercentualReembolsoST" Type="money" />
+    <Property Name="bit_ParticipaCat169" Type="bit" Nullable="false" />
+    <Property Name="bit_NaoTributa_PIS_COFINS" Type="bit" Nullable="false" />
+    <Property Name="int_PrazoMedioParcelas" Type="smallint" />
+    <Property Name="int_MesesBloqueioSerasa" Type="tinyint" />
+    <Property Name="cur_CreditoConsignacao" Type="money" />
+    <Property Name="bit_NaoVisualizaDescontoItemDanfe" Type="bit" />
+    <Property Name="bit_AceitaTrocaProdutos" Type="bit" Nullable="false" />
+    <Property Name="int_QtdeCasasDecimaisItens" Type="int" Nullable="false" />
+    <Property Name="bit_ClienteIntegracao" Type="bit" Nullable="false" />
+    <Property Name="bit_UtilizaDesoneracao" Type="bit" Nullable="false" />
+    <Property Name="bit_Hospital" Type="bit" Nullable="false" />
+    <Property Name="bit_Convenio" Type="bit" Nullable="false" />
+    <Property Name="int_ImpressaoDanfe" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tab_Estado">
+    <Key>
+      <PropertyRef Name="SiglaEstado" />
+    </Key>
+    <Property Name="SiglaEstado" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="NomeEstado" Type="nvarchar" MaxLength="30" />
+    <Property Name="AlíquotaICM" Type="money" />
+    <Property Name="PercRepasse" Type="float" Nullable="false" />
+    <Property Name="PercPrFabrica" Type="float" Nullable="false" />
+    <Property Name="SomaPercPrFabrica" Type="bit" Nullable="false" />
+    <Property Name="int_CodigoIBGE" Type="int" />
+    <Property Name="int_TipoSubstTributaria" Type="int" Nullable="false" />
+    <Property Name="dbl_CreditoPresumido" Type="float" Nullable="false" />
+    <Property Name="dbl_AliquotaInterna" Type="float" />
+    <Property Name="dbl_AliquotaCompra" Type="float" Nullable="false" />
+    <Property Name="dbl_ReducaoBaseCalculoICMSST" Type="float" Nullable="false" />
+    <Property Name="dbl_ReducaoBaseCalculoICMSSTIndFab" Type="float" Nullable="false" />
+    <Property Name="bit_UtilizarFreteOutrasDespesasIPIBaseCalcSubstTribCompraDentro" Type="bit" Nullable="false" />
+    <Property Name="bit_ReducaoCalculoICMSSTVenda" Type="bit" Nullable="false" />
+    <Property Name="fk_int_RegiaoPais" Type="int" />
+    <Property Name="bit_UtilizarCAT54" Type="bit" Nullable="false" />
+    <Property Name="bit_UtilizarCAT101" Type="bit" Nullable="false" />
+    <Property Name="bit_UtilizarCAT113" Type="bit" Nullable="false" />
+    <Property Name="bit_UtilizarCAT169" Type="bit" Nullable="false" />
+    <Property Name="bit_CAT132" Type="bit" Nullable="false" />
+    <Property Name="bit_AplicarCalculoSTMVAVenda" Type="bit" Nullable="false" />
+    <Property Name="bit_AplicarRegraSTCargaTributariaMediaApurada" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tab_Estoque">
+    <Key>
+      <PropertyRef Name="IdItem" />
+    </Key>
+    <Property Name="Grupo" Type="nvarchar" MaxLength="3" />
+    <Property Name="Referência" Type="nvarchar" MaxLength="5" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Categoria" Type="nvarchar" MaxLength="40" />
+    <Property Name="CódigoFábrica" Type="nvarchar" MaxLength="20" />
+    <Property Name="Peso" Type="money" Nullable="false" />
+    <Property Name="Volume" Type="money" />
+    <Property Name="Fornecedor" Type="nvarchar" MaxLength="8" />
+    <Property Name="Seleção" Type="bit" Nullable="false" />
+    <Property Name="CódigoVelho" Type="nvarchar" MaxLength="20" />
+    <Property Name="DescriçãoDetalhada" Type="text" />
+    <Property Name="Exclusivo" Type="bit" Nullable="false" />
+    <Property Name="ExclusivoEmpresa" Type="int" />
+    <Property Name="QUD" Type="int" />
+    <Property Name="Localização" Type="nvarchar" MaxLength="20" />
+    <Property Name="PercBaseCálculoICM" Type="money" Nullable="false" />
+    <Property Name="CódSitTributáriaA" Type="nvarchar" MaxLength="1" />
+    <Property Name="CódSitTributáriaB" Type="nvarchar" MaxLength="2" />
+    <Property Name="FormaTributação" Type="smallint" />
+    <Property Name="ReduçãoBaseCálculoICMDentro" Type="money" Nullable="false" />
+    <Property Name="ReduçãoBaseCálculoICMFora" Type="money" Nullable="false" />
+    <Property Name="Fabricado" Type="bit" Nullable="false" />
+    <Property Name="DataCadastro" Type="datetime" />
+    <Property Name="IdGarantia" Type="int" />
+    <Property Name="IdItem" Type="nvarchar" MaxLength="7" Nullable="false" />
+    <Property Name="IdUsuário" Type="nvarchar" MaxLength="20" />
+    <Property Name="Gramatura" Type="money" />
+    <Property Name="IdMarca" Type="int" />
+    <Property Name="Largura" Type="money" />
+    <Property Name="Altura" Type="money" />
+    <Property Name="EndereçoFoto" Type="nvarchar" MaxLength="50" />
+    <Property Name="TipoItem" Type="int" />
+    <Property Name="códigobarra" Type="nvarchar" MaxLength="40" />
+    <Property Name="Localização2" Type="nvarchar" MaxLength="20" />
+    <Property Name="UnidadeCompra" Type="nvarchar" MaxLength="3" />
+    <Property Name="ICMS" Type="money" />
+    <Property Name="IdPrincípioAtivo" Type="int" />
+    <Property Name="SimilarPrincípioAtivo" Type="bit" Nullable="false" />
+    <Property Name="TributaPisCofins" Type="bit" Nullable="false" />
+    <Property Name="RegistroSaude" Type="nvarchar" MaxLength="15" />
+    <Property Name="EGenerico" Type="bit" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoCMDentro7" Type="money" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMFora7" Type="money" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoCMDentro12" Type="money" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMFora12" Type="money" Nullable="false" />
+    <Property Name="BloqueadoVigSanitaria" Type="bit" Nullable="false" />
+    <Property Name="CodSitTributariaAFora" Type="nvarchar" MaxLength="1" />
+    <Property Name="CodSitTributariaBFora" Type="nvarchar" MaxLength="2" />
+    <Property Name="FormaTributacaoFora" Type="smallint" />
+    <Property Name="ICMSFora" Type="money" />
+    <Property Name="CodSitTributariaADentroENT" Type="nvarchar" MaxLength="1" />
+    <Property Name="CodSitTributariaBDentroENT" Type="nvarchar" MaxLength="2" />
+    <Property Name="FormaTributacaoDentroENT" Type="smallint" />
+    <Property Name="ICMSDentroENT" Type="money" />
+    <Property Name="ReducaoBaseCalculoICMDentroENT" Type="money" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMDentro7ENT" Type="money" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMDentro12ENT" Type="money" Nullable="false" />
+    <Property Name="CodSitTributariaAForaENT" Type="nvarchar" MaxLength="1" />
+    <Property Name="CodSitTributariaBForaENT" Type="nvarchar" MaxLength="2" />
+    <Property Name="FormaTributacaoForaENT" Type="smallint" />
+    <Property Name="ICMSForaENT" Type="money" />
+    <Property Name="ReducaoBaseCalculoICMForaENT" Type="money" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMFora7ENT" Type="money" Nullable="false" />
+    <Property Name="ReducaoBaseCalculoICMFora12ENT" Type="money" Nullable="false" />
+    <Property Name="ValorSitTributariaSaidaFora" Type="money" Nullable="false" />
+    <Property Name="ValorSitTributariaSaidaDentro" Type="money" Nullable="false" />
+    <Property Name="ValorSitTributariaEntradaFora" Type="money" Nullable="false" />
+    <Property Name="ValorSitTributariaEntradaDentro" Type="money" Nullable="false" />
+    <Property Name="IsentoOrgaoPublico" Type="tinyint" />
+    <Property Name="UtilizaRefrigeracao" Type="bit" Nullable="false" />
+    <Property Name="CurvaABCVendas" Type="varchar" MaxLength="1" />
+    <Property Name="CurvaABCLucratividade" Type="varchar" MaxLength="1" />
+    <Property Name="CurvaABCEstoque" Type="varchar" MaxLength="1" />
+    <Property Name="CurvaABCVendPartInd" Type="money" />
+    <Property Name="CurvaABCVendPartAcu" Type="money" />
+    <Property Name="CurvaABCValorVenda" Type="money" />
+    <Property Name="CurvaABCRentabilidade" Type="money" />
+    <Property Name="CurvaABCMargemContrib" Type="money" />
+    <Property Name="CurvaABCContPartInd" Type="money" />
+    <Property Name="CurvaABCContPartAcu" Type="money" />
+    <Property Name="CurvaABCValorCusto" Type="money" />
+    <Property Name="CurvaABCCustPartInd" Type="money" />
+    <Property Name="CurvaABCCustPartAcu" Type="money" />
+    <Property Name="ExigeLaudoTecnico" Type="bit" Nullable="false" />
+    <Property Name="AgrupaICMForaEnt" Type="money" Nullable="false" />
+    <Property Name="UtilizaPEM" Type="bit" Nullable="false" />
+    <Property Name="TemSubstTrib" Type="bit" Nullable="false" />
+    <Property Name="PercReducaoSubstTrib18" Type="money" Nullable="false" />
+    <Property Name="PercReducaoSubstTrib12" Type="money" Nullable="false" />
+    <Property Name="PercLPSubstTrib" Type="money" Nullable="false" />
+    <Property Name="PercLNSubstTrib" Type="money" Nullable="false" />
+    <Property Name="EProdEtico" Type="bit" Nullable="false" />
+    <Property Name="RentMinimaMarkup" Type="money" Nullable="false" />
+    <Property Name="CodBras_Medi" Type="varchar" MaxLength="5" />
+    <Property Name="CodBras_Lab" Type="varchar" MaxLength="3" />
+    <Property Name="CodBras_Apre" Type="varchar" MaxLength="4" />
+    <Property Name="ProdutoTabelado" Type="bit" Nullable="false" />
+    <Property Name="DuplicaBaseCalculoICM" Type="bit" Nullable="false" />
+    <Property Name="PercentualComissao" Type="money" Nullable="false" />
+    <Property Name="CodigoNoFornecedor" Type="varchar" MaxLength="6" />
+    <Property Name="Descrição" Type="nvarchar" MaxLength="200" />
+    <Property Name="CodigoNoFornecedorStaCruz" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="PercICMSSubstTributariaFora" Type="money" Nullable="false" />
+    <Property Name="PercICMSSubstTributariaDentro" Type="money" Nullable="false" />
+    <Property Name="str_desclicitacao" Type="varchar" MaxLength="200" />
+    <Property Name="str_desctecnica" Type="varchar" MaxLength="200" />
+    <Property Name="DataUltimaAtualizacao" Type="datetime" />
+    <Property Name="bit_UltraTest" Type="bit" Nullable="false" />
+    <Property Name="bit_VisivelWeb" Type="bit" Nullable="false" />
+    <Property Name="bit_ProdutoPromocionalWeb" Type="bit" Nullable="false" />
+    <Property Name="dbl_PercPIS" Type="float" />
+    <Property Name="dbl_PercCOFINS" Type="float" />
+    <Property Name="int_StatusCadastro" Type="int" />
+    <Property Name="IsentoOrgaoPublicoEstadual" Type="bit" Nullable="false" />
+    <Property Name="str_CodigoNoFornecedorBaldacci" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="bit_ProdutoPesado" Type="bit" Nullable="false" />
+    <Property Name="bit_produtosimilar" Type="bit" Nullable="false" />
+    <Property Name="cur_Comprimento" Type="money" />
+    <Property Name="pk_int_Estoque" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="str_Procedencia" Type="varchar" MaxLength="20" />
+    <Property Name="cur_ReducaoBaseCalculoICMFora17" Type="money" Nullable="false" />
+    <Property Name="cur_ReducaoBaseCalculoICMDentro17" Type="money" Nullable="false" />
+    <Property Name="cur_ReducaoBaseCalculoICMFora17ENT" Type="money" Nullable="false" />
+    <Property Name="cur_ReducaoBaseCalculoICMDentro17ENT" Type="money" Nullable="false" />
+    <Property Name="str_DetentoraProduto" Type="varchar" MaxLength="200" />
+    <Property Name="int_OrigemProduto" Type="int" />
+    <Property Name="bit_IsentoRegistroSaude" Type="bit" Nullable="false" />
+    <Property Name="fk_int_classificacao" Type="int" />
+    <Property Name="str_CurvaABCQtde" Type="char" MaxLength="1" />
+    <Property Name="cur_CurvaABCQtdePartInd" Type="money" />
+    <Property Name="cur_CurvaABCQtdePartAcu" Type="money" />
+    <Property Name="cur_CurvaABCValorQtde" Type="money" />
+    <Property Name="bit_RedSomenteNaoConsFinalDentroEstado" Type="bit" Nullable="false" />
+    <Property Name="bit_RedSomenteNaoConsFinalForaEstado" Type="bit" Nullable="false" />
+    <Property Name="fk_int_ClassificacaoDesconto" Type="int" />
+    <Property Name="dbl_PercPISEntrada" Type="float" Nullable="false" />
+    <Property Name="dbl_PercCOFINSEntrada" Type="float" Nullable="false" />
+    <Property Name="bit_TributaPisCofinsEntrada" Type="bit" Nullable="false" />
+    <Property Name="dbl_PercIVAForaSAI" Type="float" Nullable="false" />
+    <Property Name="dbl_PercMVAForaSAI" Type="float" Nullable="false" />
+    <Property Name="dbl_PercIVADentroSAI" Type="float" Nullable="false" />
+    <Property Name="dbl_PercMVADentroSAI" Type="float" Nullable="false" />
+    <Property Name="dbl_PercIVADentroENT" Type="float" Nullable="false" />
+    <Property Name="dbl_PercMVADentroENT" Type="float" Nullable="false" />
+    <Property Name="dbl_PercIVAForaENT" Type="float" Nullable="false" />
+    <Property Name="dbl_PercMVAForaENT" Type="float" Nullable="false" />
+    <Property Name="str_CodSitTributariaBForaConsFinal" Type="nvarchar" MaxLength="2" />
+    <Property Name="fk_int_apresentacao" Type="int" />
+    <Property Name="cur_ICMSForaConsFinal" Type="money" />
+    <Property Name="dbl_AliquotaINSS" Type="float" />
+    <Property Name="dbl_AliquotaISS" Type="float" />
+    <Property Name="str_ValidadeRegistro" Type="varchar" MaxLength="7" />
+    <Property Name="str_ProcessoRegistro" Type="varchar" MaxLength="30" />
+    <Property Name="cur_TemperaturaMaxima" Type="money" />
+    <Property Name="cur_TemperaturaMinima" Type="money" />
+    <Property Name="cur_Umidade" Type="money" />
+    <Property Name="str_Portaria" Type="varchar" MaxLength="10" />
+    <Property Name="fk_int_AmparoLegalPISCOFINS" Type="int" />
+    <Property Name="bit_ProdutoObsoleto" Type="bit" Nullable="false" />
+    <Property Name="bit_ProdutoEmFalta" Type="bit" Nullable="false" />
+    <Property Name="str_CodSitTributariaPisCofinsSAI" Type="char" MaxLength="2" />
+    <Property Name="str_CodSitTributariaPisCofinsENT" Type="char" MaxLength="2" />
+    <Property Name="str_UnidadeVenda" Type="varchar" MaxLength="3" />
+    <Property Name="dbl_ConversaoMenorCompra" Type="float" />
+    <Property Name="dbl_ConversaoMenorVenda" Type="float" />
+    <Property Name="fk_int_IdUnItemVenda" Type="int" />
+    <Property Name="fk_int_IdUnItemCompra" Type="int" />
+    <Property Name="bit_MedicamentoExcepcional" Type="bit" Nullable="false" />
+    <Property Name="str_CodigoABCFarma" Type="varchar" MaxLength="15" />
+    <Property Name="bit_IMS" Type="bit" Nullable="false" />
+    <Property Name="int_QuantidadeVenda" Type="int" />
+    <Property Name="bit_NaoObrigaMedico" Type="bit" Nullable="false" />
+    <Property Name="str_caminhoRegistro" Type="varchar" MaxLength="250" />
+    <Property Name="bit_naoProprio" Type="bit" Nullable="false" />
+    <Property Name="bit_renovaAnvisa" Type="bit" Nullable="false" />
+    <Property Name="bit_tabelado" Type="bit" Nullable="false" />
+    <Property Name="bit_esteril" Type="bit" Nullable="false" />
+    <Property Name="int_numAnvisa" Type="int" />
+    <Property Name="str_cnpj" Type="varchar" MaxLength="18" />
+    <Property Name="str_razaoSocial" Type="varchar" MaxLength="50" />
+    <Property Name="bit_execaoNCMPisCofins" Type="bit" Nullable="false" />
+    <Property Name="bit_execaoNCMEntrada" Type="bit" Nullable="false" />
+    <Property Name="bit_execaoNCMSaida" Type="bit" Nullable="false" />
+    <Property Name="fk_int_Esterilizante" Type="int" />
+    <Property Name="fk_int_Composicao" Type="int" />
+    <Property Name="fk_int_Importador" Type="int" />
+    <Property Name="fk_int_Mensagem" Type="int" />
+    <Property Name="bit_mensagemEtiqueta" Type="int" Nullable="false" />
+    <Property Name="str_descricaoEtiqueta" Type="varchar" MaxLength="50" />
+    <Property Name="str_descricaoEtiqueta2" Type="varchar" MaxLength="50" />
+    <Property Name="int_classe" Type="int" />
+    <Property Name="str_DCB" Type="varchar" MaxLength="10" />
+    <Property Name="bit_Outros" Type="bit" Nullable="false" />
+    <Property Name="str_Observacao" Type="varchar" MaxLength="8000" />
+    <Property Name="dte_ValidadeObservacao" Type="datetime" />
+    <Property Name="fk_int_Modelo" Type="int" />
+    <Property Name="str_UnidadeFabricacao" Type="varchar" MaxLength="3" />
+    <Property Name="dbl_ConversaoMenorFabricacao" Type="float" />
+    <Property Name="fk_int_IdUnItemFabricacao" Type="int" />
+    <Property Name="bit_Embalagem" Type="bit" Nullable="false" />
+    <Property Name="fk_int_TipoItem" Type="int" />
+    <Property Name="str_PathLaudo" Type="varchar" MaxLength="400" />
+    <Property Name="bit_Nacional" Type="bit" Nullable="false" />
+    <Property Name="bit_ManualBoasPraticas" Type="bit" Nullable="false" />
+    <Property Name="str_ManualBoasPraticas" Type="varchar" MaxLength="400" />
+    <Property Name="str_COD_TAB" Type="char" MaxLength="2" />
+    <Property Name="str_COD_GRU" Type="char" MaxLength="2" />
+    <Property Name="str_MARCA_COM" Type="varchar" MaxLength="60" />
+    <Property Name="bit_MaterialUsoConsumo" Type="bit" Nullable="false" />
+    <Property Name="bit_UtilizaDesoneracao" Type="bit" Nullable="false" />
+    <Property Name="int_MotivoDesoneracao" Type="int" Nullable="false" />
+    <Property Name="str_CodigoImportacao" Type="varchar" MaxLength="20" />
+    <Property Name="bit_AplicarRegraCAP" Type="bit" Nullable="false" />
+    <Property Name="bit_ExcecaoNCMDesoneracao" Type="bit" Nullable="false" />
+    <Property Name="bit_UtilizaInsumo" Type="bit" Nullable="false" />
+    <Property Name="ClassificaçãoFiscal" Type="nvarchar" MaxLength="4" />
+  </EntityType>
+  <Association Name="FK_Mov_Estoque_Detalhes_Mov_Estoque">
+    <End Role="Mov_Estoque" Type="Self.Mov_Estoque" Multiplicity="0..1" />
+    <End Role="Mov_Estoque_Detalhes" Type="Self.Mov_Estoque_Detalhes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mov_Estoque">
+        <PropertyRef Name="IdMovimento" />
+      </Principal>
+      <Dependent Role="Mov_Estoque_Detalhes">
+        <PropertyRef Name="IdMovimento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mov_Estoque_Detalhes_Tab_Estoque">
+    <End Role="Tab_Estoque" Type="Self.Tab_Estoque" Multiplicity="0..1" />
+    <End Role="Mov_Estoque_Detalhes" Type="Self.Mov_Estoque_Detalhes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tab_Estoque">
+        <PropertyRef Name="IdItem" />
+      </Principal>
+      <Dependent Role="Mov_Estoque_Detalhes">
+        <PropertyRef Name="IdItem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mov_Estoque_Tab_Cadastro">
+    <End Role="Tab_Cadastro" Type="Self.Tab_Cadastro" Multiplicity="0..1" />
+    <End Role="Mov_Estoque" Type="Self.Mov_Estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tab_Cadastro">
+        <PropertyRef Name="Codinome" />
+      </Principal>
+      <Dependent Role="Mov_Estoque">
+        <PropertyRef Name="IdCadastro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mov_Estoque_Tab_Estado">
+    <End Role="Tab_Estado" Type="Self.Tab_Estado" Multiplicity="0..1" />
+    <End Role="Mov_Estoque" Type="Self.Mov_Estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tab_Estado">
+        <PropertyRef Name="SiglaEstado" />
+      </Principal>
+      <Dependent Role="Mov_Estoque">
+        <PropertyRef Name="fk_str_EstadoConselho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tab_Estoque_Tab_Cadastro">
+    <End Role="Tab_Cadastro" Type="Self.Tab_Cadastro" Multiplicity="0..1" />
+    <End Role="Tab_Estoque" Type="Self.Tab_Estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tab_Cadastro">
+        <PropertyRef Name="Codinome" />
+      </Principal>
+      <Dependent Role="Tab_Estoque">
+        <PropertyRef Name="Fornecedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference34">
+    <End Role="Tab_Estado" Type="Self.Tab_Estado" Multiplicity="0..1" />
+    <End Role="Tab_Cadastro" Type="Self.Tab_Cadastro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tab_Estado">
+        <PropertyRef Name="SiglaEstado" />
+      </Principal>
+      <Dependent Role="Tab_Cadastro">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OuroBaseModelStoreContainer">
+    <EntitySet Name="Mov_Estoque" EntityType="Self.Mov_Estoque" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mov_Estoque_Detalhes" EntityType="Self.Mov_Estoque_Detalhes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tab_Cadastro" EntityType="Self.Tab_Cadastro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tab_Estado" EntityType="Self.Tab_Estado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tab_Estoque" EntityType="Self.Tab_Estoque" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Mov_Estoque_Detalhes_Mov_Estoque" Association="Self.FK_Mov_Estoque_Detalhes_Mov_Estoque">
+      <End Role="Mov_Estoque" EntitySet="Mov_Estoque" />
+      <End Role="Mov_Estoque_Detalhes" EntitySet="Mov_Estoque_Detalhes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mov_Estoque_Detalhes_Tab_Estoque" Association="Self.FK_Mov_Estoque_Detalhes_Tab_Estoque">
+      <End Role="Tab_Estoque" EntitySet="Tab_Estoque" />
+      <End Role="Mov_Estoque_Detalhes" EntitySet="Mov_Estoque_Detalhes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mov_Estoque_Tab_Cadastro" Association="Self.FK_Mov_Estoque_Tab_Cadastro">
+      <End Role="Tab_Cadastro" EntitySet="Tab_Cadastro" />
+      <End Role="Mov_Estoque" EntitySet="Mov_Estoque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mov_Estoque_Tab_Estado" Association="Self.FK_Mov_Estoque_Tab_Estado">
+      <End Role="Tab_Estado" EntitySet="Tab_Estado" />
+      <End Role="Mov_Estoque" EntitySet="Mov_Estoque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tab_Estoque_Tab_Cadastro" Association="Self.FK_Tab_Estoque_Tab_Cadastro">
+      <End Role="Tab_Cadastro" EntitySet="Tab_Cadastro" />
+      <End Role="Tab_Estoque" EntitySet="Tab_Estoque" />
+    </AssociationSet>
+    <AssociationSet Name="Reference34" Association="Self.Reference34">
+      <End Role="Tab_Estado" EntitySet="Tab_Estado" />
+      <End Role="Tab_Cadastro" EntitySet="Tab_Cadastro" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
