@@ -1,0 +1,14 @@
+D:\Developer\LinqExemplos\LinqExemplos\bin\Debug\LinqExemplos.exe.config
+D:\Developer\LinqExemplos\LinqExemplos\bin\Debug\LinqExemplos.exe
+D:\Developer\LinqExemplos\LinqExemplos\bin\Debug\LinqExemplos.pdb
+D:\Developer\LinqExemplos\LinqExemplos\obj\Debug\LinqExemplos.csprojAssemblyReference.cache
+D:\Developer\LinqExemplos\LinqExemplos\obj\Debug\LinqExemplos.csproj.CoreCompileInputs.cache
+D:\Developer\LinqExemplos\LinqExemplos\obj\Debug\LinqExemplos.exe
+D:\Developer\LinqExemplos\LinqExemplos\obj\Debug\LinqExemplos.pdb
+D:\Developer\GitHub\linqCsharp\LinqExemplos\LinqExemplos\bin\Debug\LinqExemplos.exe.config
+D:\Developer\GitHub\linqCsharp\LinqExemplos\LinqExemplos\bin\Debug\LinqExemplos.exe
+D:\Developer\GitHub\linqCsharp\LinqExemplos\LinqExemplos\bin\Debug\LinqExemplos.pdb
+D:\Developer\GitHub\linqCsharp\LinqExemplos\LinqExemplos\obj\Debug\LinqExemplos.csprojAssemblyReference.cache
+D:\Developer\GitHub\linqCsharp\LinqExemplos\LinqExemplos\obj\Debug\LinqExemplos.csproj.CoreCompileInputs.cache
+D:\Developer\GitHub\linqCsharp\LinqExemplos\LinqExemplos\obj\Debug\LinqExemplos.exe
+D:\Developer\GitHub\linqCsharp\LinqExemplos\LinqExemplos\obj\Debug\LinqExemplos.pdb
